@@ -7,9 +7,9 @@ export default class About extends Component {
     return (
       <>
         <div className='two-column'>
-          <h1 className='two-column-item'>We <br/> are <br/>  HYFIX</h1> 
+          <h1 className='two-column-item'>We are HYFIX</h1> 
           
-          <p className='two-column-item'> Optio cum repudiandae nam quis nulla ducimus. Eius quod sint nostrum. Quis assumenda dolor accusamus enim rerum eum repellendus velit. Saepe cumque quo architecto et voluptatem voluptatem laboriosam nulla. Delectus quibusdam dicta et rerum. </p>
+          <p className='two-column-item'>HYFIX Spatial Intelligence provides software and services for global satellite based navigation. HYFIX's unique technology models space weather and satellite errors in real-time for IoT, Automotive and Precision Industrial applications.</p>
         </div>
        
       </>
