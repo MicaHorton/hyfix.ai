@@ -8,3 +8,5 @@ Solution To Deployement Issues:
 - make sure curl is installed
 - sudo service codedeploy-agent restart if IAM role not attached at beginning
 - check logs at /var/log/aws/codedeploy-agent/codedeploy-agent.log
+
+Test
