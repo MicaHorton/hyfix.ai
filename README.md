@@ -9,4 +9,6 @@ Solution To Deployement Issues:
 - sudo service codedeploy-agent restart if IAM role not attached at beginning
 - check logs at /var/log/aws/codedeploy-agent/codedeploy-agent.log
 
+wget https://aws-codedeploy-us-west-1.s3.us-west-1.amazonaws.com/latest/install
+
 Test
