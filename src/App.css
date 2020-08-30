@@ -38,17 +38,20 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
 
 }
 
 .two-column-item {
-    width: 50vw;
+    width: 45vw;
 }
 
 .two-column-item:first-child {
     margin-left: 40px;
+    margin-right: 75px;
     font-size: 32px;
 }
+
 
 iframe {
     display: block;
