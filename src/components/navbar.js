@@ -13,9 +13,16 @@ export default class Navbar extends Component {
     return (
 
           <nav className='nav'>
-              <Link to='/' className='nav-item'><img className='nav-image' src={logo} alt='logo' /></Link>
-              <Link to='/' className='nav-item'>About</Link>
-              <Link to='/promotion' className='nav-item'>Promotion</Link>
+              <Link to='/' className='logo'>
+                <img className='logo-image' src={logo} alt='logo'/>
+              </Link>
+              
+              <div className='menu'>
+                <Link to='/' className='menu-item'>About</Link>
+                <Link to='/promotion' className='menu-item'>Promotion</Link>
+              </div>
+
+
           </nav>
 
       
