@@ -1,48 +1,44 @@
-/* Header Image */
 body {
     margin: 0;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-.header {
-    background-image: url('./cover-image.jpg');
-
-    /* Center and scale the image nicely */
-    min-height: 500px;
-    position: relative;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /* Navigation Bar */
 .nav {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    height: 100px;
 }
 
-.nav-item {
-    margin-top: 30px;
-    margin-left: 70px;
+.logo {
+    display: flex;
+    align-items: center;
 
-    color: white;
+}
+
+.logo-image {
+    height: 80px;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+
+}
+
+.menu-item {
     font-size: 25px;
+    padding: 30px;
+    font-family: inherit;
 }
 
-.nav-item:last-child {
-    margin-right: 50px;
-    
-}
 
-/* About Page */
+/* Promotion Page */
 .two-column {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 
-    margin-top: 50px;
 }
 
 .two-column-item {
@@ -50,15 +46,21 @@ body {
 }
 
 .two-column-item:first-child {
-    text-align: center;
-    font-size: 36px;
+    margin-left: 40px;
+    font-size: 32px;
 }
 
-
-/* Promotion Page */
 iframe {
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    background-color: white;
 }
 
+/* About Page */
+
+.about {
+    font-size: 32px;
+    margin-left: 50px;
+}
