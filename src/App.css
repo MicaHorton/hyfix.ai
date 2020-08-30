@@ -1,34 +1,45 @@
 body {
     margin: 0;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: grey;
 }
 
 
 /* Navigation Bar */
 .nav {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    background-color: rgb(34, 40, 46);
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 
 }
 
-.nav-image {
-    justify-content: flex-start;
-    height: 50px;
+.logo-image {
+    height: 80px;
+    margin-left: 20px;
+}
+
+.menu {
+    display: flex;
 
 }
 
-
-.nav-item {
-    margin-top: 30px;
-    margin-left: 70px;
+.menu-item {
     font-size: 25px;
+    padding: 30px;
+    color: white;
+    font-family: inherit;
 }
 
-.nav-item:last-child {
-    margin-right: 50px;
-    
-}
+
+
+
+
 
 /* About Page */
 .two-column {
@@ -54,5 +65,7 @@ iframe {
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    background-color: white;
 }
 
