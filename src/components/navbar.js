@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../App.css';
+import logo from '../logo.jpg';
 /*
 import Image from '../cover-image.jpg';
 <img src={Image} alt='website header'/>
@@ -10,12 +11,20 @@ import Image from '../cover-image.jpg';
 export default class Navbar extends Component {
   render() {
     return (
-        <div className='header'>
-            <nav className='nav'>
-                <Link to='/' className='nav-item'>About</Link>
-                <Link to='/promotion' className='nav-item'>Promotion</Link>
-            </nav>
-        </div>
+
+          <nav className='nav'>
+              <Link to='/' className='logo'>
+                <img className='logo-image' src={logo} alt='logo'/>
+              </Link>
+              
+              <div className='menu'>
+                <Link to='/' className='menu-item'>About</Link>
+                <Link to='/promotion' className='menu-item'>Promotion</Link>
+              </div>
+
+
+          </nav>
+
       
     );
   }
