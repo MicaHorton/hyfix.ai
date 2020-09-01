@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import base from '../media/base.jpg';
 
 
 export default class About extends Component {
@@ -8,7 +8,19 @@ export default class About extends Component {
       <div className='two-column'>
         <div className='two-column-item'>
           <h1>Make your roof work for you.</h1>
-          <p>Get paid yearly to host a space weather station on your roof. We're looking for people in Canada with few trees nearby. Enter your info through the contact form to apply!</p>
+
+          <div className='base'>
+            <img className='base-image' src={base} alt='base'/>
+            <p className='base-caption'>
+                   Interested in making money by hosting a small space weather station?
+              HYFIX will pay $1000 dollars a year for our small antenna to be placed on homes with a clear view of the sky. 
+              The antenna will be part of a nationwide network used to provide data to scientists and robotics researchers.
+              Currently, we're only accepting people living in Canada. 
+              Enter your info through the contact form to apply!
+            </p>
+
+          </div>
+          
 
         </div>
 

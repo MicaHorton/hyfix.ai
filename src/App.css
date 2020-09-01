@@ -30,6 +30,15 @@ body {
     font-size: 25px;
     padding: 30px;
     font-family: inherit;
+    color: #5d2590;
+
+}
+
+/* About Page */
+
+.about {
+    font-size: 32px;
+    margin-left: 50px;
 }
 
 
@@ -42,28 +51,51 @@ body {
 
 }
 
-.two-column-item {
+.two-column-item:last-child {
     width: 45vw;
+    margin-top: 10px;
 }
 
 .two-column-item:first-child {
+    width: 50vw;
     margin-left: 40px;
-    margin-right: 75px;
+    margin-right: 20px;
     font-size: 32px;
 }
+
 
 
 iframe {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin-right: 20px;
     background-color: white;
 }
 
-/* About Page */
+.base {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-.about {
-    font-size: 32px;
-    margin-left: 50px;
 }
+
+.base-image {
+    width: 50%;
+
+}
+
+.base-caption {
+    width: 45%;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-top: -3px;
+ 
+
+
+}
+
+
+
+
+
+
+

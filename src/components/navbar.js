@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../App.css';
-import logo from '../logo.jpg';
+import logo from '../media/logo.jpg';
 /*
 import Image from '../cover-image.jpg';
 <img src={Image} alt='website header'/>
