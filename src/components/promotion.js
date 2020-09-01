@@ -7,9 +7,9 @@ export default class About extends Component {
     return (
       <div className='two-column'>
         <div className='two-column-item'>
-          <h1>Make your roof work for you.</h1>
 
           <div className='base'>
+            <h1>Make your roof work for you.</h1>
             <img className='base-image' src={base} alt='base'/>
             <p className='base-caption'>
                    Interested in making money by hosting a small space weather station?

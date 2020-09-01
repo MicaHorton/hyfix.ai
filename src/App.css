@@ -1,4 +1,5 @@
 body {
+    padding: 0;
     margin: 0;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
@@ -44,31 +45,30 @@ body {
 
 /* Promotion Page */
 .two-column {
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-
+    
 }
 
 .two-column-item:last-child {
-    width: 45vw;
     margin-top: 10px;
+
 }
-
-.two-column-item:first-child {
-    width: 50vw;
-    margin-left: 40px;
-    margin-right: 20px;
-    font-size: 32px;
-}
-
-
 
 iframe {
     display: block;
-    margin-right: 20px;
     background-color: white;
+}
+
+.two-column-item:first-child {
+    max-width: 700px;
+    margin-left: 40px;
+    padding-right: 20px;
+    font-size: 32px;
+
 }
 
 .base {
@@ -79,18 +79,17 @@ iframe {
 }
 
 .base-image {
-    width: 50%;
+    max-width: 300px;
 
 }
 
 .base-caption {
-    width: 45%;
+    max-width: 380px;
     font-size: 25px;
-    margin-left: 30px;
     margin-top: -3px;
+    margin-left: 20px;
+
  
-
-
 }
 
 
