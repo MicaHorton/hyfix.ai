@@ -85,6 +85,7 @@ iframe {
 
 .base-caption {
     max-width: 380px;
+    max-width: 800px;
     font-size: 25px;
     margin-top: -3px;
     margin-left: 20px;
