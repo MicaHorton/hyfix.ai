@@ -44,31 +44,36 @@ body {
 
 
 /* Promotion Page */
+
 .two-column {
-    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    margin-right: 10px;
+    margin-left: 10px;
     
+}
+
+.two-column-item:first-child {
+    max-width: 700px;
+    font-size: 32px;
+
+    margin-left: 40px;
+    padding-right: 20px; 
+
 }
 
 .two-column-item:last-child {
     margin-top: 10px;
+    flex: b;
 
 }
 
 iframe {
     display: block;
     background-color: white;
-}
-
-.two-column-item:first-child {
-    max-width: 700px;
-    margin-left: 40px;
-    padding-right: 20px;
-    font-size: 32px;
-
 }
 
 .base {
@@ -80,7 +85,7 @@ iframe {
 
 .base-image {
     max-width: 300px;
-    max-height: 800px;
+    max-height: 500px;
 
 }
 
@@ -88,9 +93,7 @@ iframe {
     max-width: 380px;
     font-size: 25px;
     margin-top: -3px;
-    margin-left: 20px;
-
- 
+    margin-left: 20px; 
 }
 
 
@@ -99,3 +102,19 @@ iframe {
 
 
 
+/* I need to do a better job with the margins (and selectors)
+
+.two-column (margins)
+    .two-column-item .explain
+        .explain-image
+        .explain-caption
+
+
+
+    .two-column-item .contact
+
+each item is 50/50
+however, .explain has padding right
+
+
+*/
