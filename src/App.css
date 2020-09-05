@@ -45,58 +45,145 @@ body {
 
 /* Promotion Page */
 
-.two-column {
+.page-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     flex-wrap: wrap;
 
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 40px;
+    margin-right: 40px;  
+
+}
+
+/* Page Item 1 (Left) */
+.page-item-1 {
+    flex-basis: 55%;
+    text-align: center;
+    flex-grow: 1;
+    height: 700px;
+
+}
+
+.page-item-1 h1 {
+    font-size: 64px;
+    text-align: left;
+    margin-top: 10px;
     
 }
 
-.two-column-item:first-child {
-    max-width: 700px;
-    font-size: 32px;
-
-    margin-left: 40px;
-    padding-right: 20px; 
-
+.page-item-1 p {
+    font-size: 25px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 0px;
 }
 
-.two-column-item:last-child {
-    margin-top: 10px;
-    flex: b;
 
-}
-
-iframe {
-    display: block;
-    background-color: white;
-}
-
-.base {
+.base-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 
 }
 
 .base-image {
+    flex-basis: 50%;
+    max-width: 400px;
+    object-fit: contain;
+    
+}
+
+.base-caption {
+    flex-basis: 50%;
+}
+
+/* Page Item 2 (Right) */
+.page-item-2 {
+    flex-basis: 45%;
+    text-align: center;
+    flex-grow: 1;
+    
+    
+}
+
+iframe {
+    padding-left: 20px;
+    min-width: 500px;
+    
+    float: right;
+    
+}
+
+/*
+width='640' height='1500' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' 
+
+.promotion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-right: 40px;
+    margin-left: 40px;
+    
+}
+
+.explain {
+    border: 5px solid red;
+    flex-basis: calc(100%-700px);
+    margin: 0;
+    padding: 0;
+
+
+
+    max-width: 700px;
+    font-size: 32px;
+}
+
+.contact {
+    border: 5px solid red;
+    flex-basis: 640px;
+    margin: 0;
+    padding: 0;
+
+   
+} 
+
+iframe {
+    margin: 0;
+    padding: 0;
+} */
+
+/*
+
+.base {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.base-image {
+    flex-basis: 50%;
+    
     max-width: 300px;
     max-height: 500px;
 
 }
 
 .base-caption {
+    flex-basis: 50%;
+    
     max-width: 380px;
     font-size: 25px;
-    margin-top: -3px;
-    margin-left: 20px; 
+    flex-wrap: wrap;
+
 }
 
 
+iframe {
+    background-color: white;
+} */
 
 
 
