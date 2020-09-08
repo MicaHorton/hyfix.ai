@@ -1,4 +1,5 @@
 
+# Current Deployement Method
 Deploy Tutorial: https://medium.com/dev-genius/deploy-a-reactjs-application-to-aws-ec2-instance-using-aws-codepipeline-3df5e4157028
 
 Solution To Deployement Issues:
@@ -11,4 +12,26 @@ Solution To Deployement Issues:
 
 wget https://aws-codedeploy-us-west-1.s3.us-west-1.amazonaws.com/latest/install
 
-Test
+
+# Deployement Options
+- serverless frameworks 
+    - AWS Amplify
+    - Vercel
+    - Render
+    - Firebase
+
+- storage bucket
+    - AWS S3: https://medium.com/dailyjs/a-guide-to-deploying-your-react-app-with-aws-s3-including-https-a-custom-domain-a-cdn-and-58245251f081
+
+
+- AWS EC2 with CodePipeline
+    
+1) Code source (Github/CodeCommit/AWS S3)
+2) Build provider (CodeBuild or Jenkins) with buildspec.yml file. Compiles and runs test.
+3) Deploy provider (AWS CodeDeploy) with appsec.yml file and CodeDeploy agent. Install dependencies and deploy with:
+4) server - npm -g serve or pm2
+
+
+
+- GCloud App Deploy (also sort of serverless? but can create a "severless" backend api)
+- GraphQL?
