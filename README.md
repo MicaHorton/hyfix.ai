@@ -29,9 +29,24 @@ wget https://aws-codedeploy-us-west-1.s3.us-west-1.amazonaws.com/latest/install
 1) Code source (Github/CodeCommit/AWS S3)
 2) Build provider (CodeBuild or Jenkins) with buildspec.yml file. Compiles and runs test.
 3) Deploy provider (AWS CodeDeploy) with appsec.yml file and CodeDeploy agent. Install dependencies and deploy with:
-4) server - npm -g serve or pm2
+4) server - npm -g serve vs npm start
 
+
+
+5) pm2 monitoring thing?
 
 
 - GCloud App Deploy (also sort of serverless? but can create a "severless" backend api)
 - GraphQL?
+
+express
+https://dev.to/nburgess/creating-a-react-app-with-react-router-and-an-express-backend-33l3s
+https://medium.com/@maison.moa/setting-up-an-express-backend-server-for-create-react-app-bc7620b20a61
+
+https
+https://stackoverflow.com/questions/11744975/enabling-https-on-express-js
+
+# Options
+
+1) try using npm serve. first https locally then try to deploy
+2) if not, just use aws amplify or something
