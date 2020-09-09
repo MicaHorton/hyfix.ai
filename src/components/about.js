@@ -9,7 +9,7 @@ export default class About extends Component {
         <div className='about'>
           <h1>We are HYFIX</h1> 
           
-          <p>HYFIX Spatial Intelligence services for global satellite-based navigation. HYFIX's unique technology models space weather and satellite errors in real-time for IoT, automative and industrial applications.</p>
+          <p>HYFIX Spatial Intelligence services for global satellite-based navigation. HYFIX's unique technology models space weather and satellite errors in real-time for IoT, automotive and industrial applications.</p>
         </div>
        
       </>
