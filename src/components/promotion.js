@@ -16,7 +16,7 @@ export default class About extends Component {
                     Interested in making money by hosting a small space weather station?
                 HYFIX will pay $1000 dollars a year for our small antenna to be placed on homes with a clear view of the sky. 
                 The antenna will be part of a nationwide network used to provide data to scientists and robotics researchers.
-                Currently, we're only accepting people living in Canada. 
+                Currently, we're only accepting people living in Mongolia. 
                 Enter your info through the contact form to apply!
               </p>
 
