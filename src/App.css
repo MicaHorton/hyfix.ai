@@ -40,11 +40,12 @@ body {
 /* Normal Pages */
 
 .company-banner {
-    height: 300px;
-    width: 300px;
-    background-image: url('./media/company-banner.jpeg');
-    background-size: 30px; 
-}
+    background-image: url('./media/company_banner.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}    
 
 .banner-image {
     width: 100%;
