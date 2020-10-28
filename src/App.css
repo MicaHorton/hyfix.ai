@@ -9,6 +9,8 @@ body {
     display: flex;
     justify-content: space-between;
     height: 100px;
+    background-color: rgb(35,40,46);
+
 }
 
 .logo {
@@ -31,15 +33,23 @@ body {
     font-size: 25px;
     padding: 30px;
     font-family: inherit;
-    color: #5d2590;
+    color: white;
 
 }
 
-/* About Page */
+/* Normal Pages */
 
-.about {
-    font-size: 32px;
-    margin-left: 50px;
+.company-banner {
+    height: 300px;
+    width: 300px;
+    background-image: url('./media/company-banner.jpeg');
+    background-size: 30px; 
+}
+
+.banner-image {
+    width: 100%;
+
+
 }
 
 

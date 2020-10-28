@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import Navbar from "./components/navbar.js";
-import About from "./components/about.js";
 import Promotion from "./components/promotion.js";
 
 import Company from "./components/company.js";
@@ -17,10 +16,9 @@ function App() {
     <Router>
 
       <Navbar />
-      <Route path='/' exact component={About} />
-      <Route path='/promotion' exact component={Promotion} />
 
-      <Route path='/company' exact component={Company} />
+      <Route path='/' exact component={Company} />
+      <Route path='/promotion' exact component={Promotion} />
       <Route path='/applications' exact component={Applications} />
       <Route path='/network' exact component={Network} />
       <Route path='/technology' exact component={Technology} />

@@ -18,10 +18,8 @@ export default class Navbar extends Component {
               </Link>
               
               <div className='menu'>
-                <Link to='/' className='menu-item'>About</Link>
+                <Link to='/' className='menu-item'>Company</Link>
                 <Link to='/promotion' className='menu-item'>Promotion</Link>
-
-                <Link to='/company' className='menu-item'>Company</Link>
                 <Link to='/applications' className='menu-item'>Applications</Link>
                 <Link to='/network' className='menu-item'>Network</Link>
                 <Link to='/technology' className='menu-item'>Technology</Link>
