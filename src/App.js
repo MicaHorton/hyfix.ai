@@ -5,6 +5,12 @@ import Navbar from "./components/navbar.js";
 import About from "./components/about.js";
 import Promotion from "./components/promotion.js";
 
+import Company from "./components/company.js";
+import Applications from "./components/applications.js";
+import Network from "./components/network.js";
+import Technology from "./components/technology.js";
+
+
 
 function App() {
   return (
@@ -13,6 +19,11 @@ function App() {
       <Navbar />
       <Route path='/' exact component={About} />
       <Route path='/promotion' exact component={Promotion} />
+
+      <Route path='/company' exact component={Company} />
+      <Route path='/applications' exact component={Applications} />
+      <Route path='/network' exact component={Network} />
+      <Route path='/technology' exact component={Technology} />
 
     </Router>
   );
