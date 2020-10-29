@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Montserrat:wght@500;600;700&family=Ramabhadra&display=swap');
+
 body {
     padding: 0;
     margin: 0;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: 'Hind Madurai', sans-serif;
+    color: white;
 }
 
 /* Navigation Bar */
@@ -9,7 +12,7 @@ body {
     display: flex;
     justify-content: space-between;
     height: 100px;
-    background-color: rgb(35,40,46);
+    background-color: rgb(34,40,46);
 
 }
 
@@ -33,26 +36,65 @@ body {
     font-size: 25px;
     padding: 30px;
     font-family: inherit;
-    color: white;
+    color: inherit;
 
 }
 
-/* Normal Pages */
+/* Normal-Page Banner */
 
-.company-banner {
-    background-image: url('./media/company_banner.jpeg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 400px;
-    width: 100%;
-}    
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .banner-image {
     width: 100%;
-
-
+    
 }
 
+.banner-text {
+    position: absolute;
+    margin-bottom: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
+    font-weight: 600;
+   
+}
+
+
+/* Normal Page Text */
+.section {
+    display: flex;
+    align-items: center;
+}
+
+.section-light {
+    background-color: #4e5154;
+}
+
+.section-dark {
+    background-color:#202020;  
+}
+
+.section-text {
+    margin-top: -5px;
+    margin-bottom: 0;
+    padding: 100px;
+}
+
+h2.section-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+p.section-text {
+    font-size: 40px;
+
+}
 
 /* Promotion Page */
 
@@ -60,10 +102,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    margin-left: 40px;
-    margin-right: 40px;  
-
+    padding: 30px 50px 0 50px;
+    background-color: #4e5154;
 }
 
 /* Page Item 1 (Left) */
@@ -72,10 +112,12 @@ body {
     text-align: center;
     flex-grow: 1;
     height: 700px;
-
 }
 
 .page-item-1 h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
     font-size: 64px;
     text-align: left;
     margin-top: 10px;
@@ -125,92 +167,10 @@ iframe {
 }
 
 /*
-width='640' height='1500' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' 
-
-.promotion {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    margin-right: 40px;
-    margin-left: 40px;
-    
-}
-
-.explain {
-    border: 5px solid red;
-    flex-basis: calc(100%-700px);
-    margin: 0;
-    padding: 0;
-
-
-
-    max-width: 700px;
-    font-size: 32px;
-}
-
-.contact {
-    border: 5px solid red;
-    flex-basis: 640px;
-    margin: 0;
-    padding: 0;
-
-   
-} 
-
-iframe {
-    margin: 0;
-    padding: 0;
-} */
-
-/*
-
-.base {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.base-image {
-    flex-basis: 50%;
-    
-    max-width: 300px;
-    max-height: 500px;
-
-}
-
-.base-caption {
-    flex-basis: 50%;
-    
-    max-width: 380px;
-    font-size: 25px;
-    flex-wrap: wrap;
-
-}
-
-
-iframe {
-    background-color: white;
-} */
-
-
-
-
-
-/* I need to do a better job with the margins (and selectors)
-
-.two-column (margins)
-    .two-column-item .explain
-        .explain-image
-        .explain-caption
-
-
-
-    .two-column-item .contact
-
-each item is 50/50
-however, .explain has padding right
-
-
+Monsterrat
+Lora
+Hindi Maduri
+https://fonts.google.com/specimen/Hind+Vadodara
+https://fonts.google.com/specimen/Hind+Vadodara
+https://fonts.google.com/specimen/Rosario
 */
