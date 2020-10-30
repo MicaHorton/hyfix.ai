@@ -15,13 +15,13 @@ export default class Company extends Component {
 
         
           <section className='section section-dark'>
-            <h2 className='section-text'><i>HYFIX</i> is embarking on a mission to democratize the sensor data by making it globally available, accessible, 
+            <h2 className='section-text'>HYFIX is embarking on a mission to democratize sensor data by making it globally available, accessible, 
               and affordable.</h2>
           </section>
 
           <section className='section section-light'>
             <p className='section-text'> As a first step towards this journey, we are building a global network of RTK reference 
-              stations to provide a hardware agnostic, fully modernized, multi-constellation, open-standard based, 
+              stations to provide  
               <ul>
                 <li>hardware agnostic</li>
                 <li>fully modernized</li>
@@ -34,8 +34,8 @@ export default class Company extends Component {
           </section>
 
           <section className='section section-dark'>
-            <p className='section-text'>  Founded by the pioneers in IoT, Sensor Fusion, 
-              Inertial Navigation and GNSS networking, we are headquartered in the heart of the Silicon Valley.
+            <p className='section-text'>  Founded by pioneers in IoT, Sensor Fusion, 
+              Inertial Navigation and GNSS networking, we are headquartered in the heart of Silicon Valley.
            </p>
           </section>
 
