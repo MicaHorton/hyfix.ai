@@ -15,8 +15,8 @@ export default class Network extends Component {
           <p className='section-text quote'>HYFIX aspires to build the largest global RTK network with fully modernized receivers 
               to provide hardware-agnostic and open-standards based correction services. We plan to 
               realize this goal is by establishing close partnerships with hardware providers to deploy 
-              new base stations, supplementing with existing open networks , forming alliances with 
-              regional public network services and collaborating with local independent. 
+              new base stations, supplementing with existing open networks, forming alliances with 
+              regional public network services, and supporting local independent operators.
               By deploying a global network of base stations, HYFIX will provide cost-effective, 
               high precision data and correction services to users globally.
             </p>

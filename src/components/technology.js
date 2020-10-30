@@ -20,7 +20,7 @@ export default class Technology extends Component {
               <img className='icon' src={rtk_gnss_icon} alt='icon'/>
               <div className='list-text'>
                 <h2>RTK GNSS</h2>
-                <h3>HYFIX positioning services provide cm level precision to enable mass market applications.</h3>
+                <h3>HYFIX positioning services provide centimeter level precision for mass market applications.</h3>
               </div>
             </section>
 
@@ -28,7 +28,7 @@ export default class Technology extends Component {
               <img className='icon' src={sensor_fusion_icon} alt='icon'/>
               <div className='list-text'>
                 <h2>Sensor Fusion</h2>
-                <h3>Using sensor fusion of IMU, GNSS and other sensor data, HYFIX algorithms can provide precise positioning during GPS outages.</h3>
+                <h3>Using sensor fusion of IMU, GNSS and other sensor data, HYFIX algorithms can provide precise positioning in GPS challenged enviroments.</h3>
               </div>
               
             </section>
