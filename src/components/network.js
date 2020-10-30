@@ -4,7 +4,7 @@ import network_banner from '../media/network_banner.jpg';
 export default class Network extends Component {
   render() {
     return (
-      <div>
+      <main>
 
         <header className='banner'>
             <img className='banner-image' src={network_banner} alt='logo'/>
@@ -24,7 +24,7 @@ export default class Network extends Component {
         
         
             
-      </div>
+      </main>
        
 
     );
