@@ -9,7 +9,7 @@ export default class Company extends Component {
           
           <header className='banner'>
             <img className='banner-image' src={company_banner} alt='logo'/>
-            <h1 className='banner-text'>Precision Is A Service</h1>
+            <h1 className='banner-text'>Precision As A Service</h1>
           </header>
           
 
