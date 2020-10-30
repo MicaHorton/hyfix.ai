@@ -4,7 +4,7 @@ import applications_banner from '../media/applications_banner.png';
 export default class Applications extends Component {
   render() {
     return (
-        <div>
+        <main>
           <header className='banner'>
             <img className='banner-image' src={applications_banner} alt='logo'/>
           </header>
@@ -20,7 +20,7 @@ export default class Applications extends Component {
           </section>
             
               
-        </div>
+        </main>
 
 
     );

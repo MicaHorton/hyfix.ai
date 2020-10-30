@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Montserrat:wght@500;600;700&family=Ramabhadra&display=swap');
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     padding: 0;
     margin: 0;
     font-family: 'Hind Madurai', sans-serif;
     color: white;
+    position: relative;
 }
+
+/*
+main {
+    width: 100vw;
+    overflow-x: hidden;
+    border: 5px red line;
+}*/
 
 /* Navigation Bar */
 .nav {
@@ -51,7 +63,6 @@ body {
 
 .banner-image {
     width: 100%;
-    
 }
 
 .banner-text {

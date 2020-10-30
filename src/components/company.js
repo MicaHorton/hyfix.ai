@@ -5,7 +5,7 @@ import company_banner from '../media/company_banner.jpeg';
 export default class Company extends Component {
   render() {
     return (
-        <div>
+        <main>
           
           <header className='banner'>
             <img className='banner-image' src={company_banner} alt='logo'/>
@@ -41,7 +41,7 @@ export default class Company extends Component {
 
          
               
-        </div>     
+        </main>     
     );
   }
 }
