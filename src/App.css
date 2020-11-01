@@ -16,6 +16,7 @@ body {
 
 /* Navigation Bar */
 
+
 main {
     padding-top: 100px;
 }
@@ -120,7 +121,7 @@ p.section-text {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 30px 50px 0 50px;
+    padding: 120px 50px 0;
     background-color: #4e5154;
 }
 
