@@ -13,19 +13,21 @@ body {
     position: relative;
 }
 
-/*
-main {
-    width: 100vw;
-    overflow-x: hidden;
-    border: 5px red line;
-}*/
 
 /* Navigation Bar */
+
+main {
+    padding-top: 100px;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
     height: 100px;
-    background-color: rgb(34,40,46);
+    background-color: rgb(34,40,46, 0.8);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
 
 }
 
@@ -33,11 +35,13 @@ main {
     display: flex;
     align-items: center;
 
+
 }
 
 .logo-image {
     height: 80px;
     padding: 20px;
+
 }
 
 .menu {
@@ -50,6 +54,9 @@ main {
     padding: 30px;
     font-family: inherit;
     color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 1;
 
 }
 
@@ -72,8 +79,6 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-size: 100px;
     font-weight: 600;
-
-   
 }
 
 
@@ -176,7 +181,6 @@ p.section-text {
 iframe {
     padding-left: 20px;
     min-width: 500px;
-    
 }
 
 /* Technology Page */
@@ -208,7 +212,17 @@ iframe {
     font-weight: 400;
 }
 
+/* Contact Page */
 
+.contact-page {
+    display: flex;
+    align-items: center;
+    background-color: #4e5154;
+}
+
+.contact-page iframe {
+    margin-top: 30px;   
+}
 
 /*
 Monsterrat
