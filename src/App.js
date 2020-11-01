@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import Navbar from "./components/navbar.js";
 import Promotion from "./components/promotion.js";
-
 import Company from "./components/company.js";
 import Applications from "./components/applications.js";
 import Network from "./components/network.js";
 import Technology from "./components/technology.js";
-
+import Contact from "./components/contact.js";
 
 
 function App() {
@@ -22,6 +21,7 @@ function App() {
       <Route path='/applications' exact component={Applications} />
       <Route path='/network' exact component={Network} />
       <Route path='/technology' exact component={Technology} />
+      <Route path='/contact' exact component={Contact} />
 
     </Router>
   );
