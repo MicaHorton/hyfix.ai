@@ -217,15 +217,24 @@ iframe {
 
 .contact-page {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #4e5154;
 }
 
 .contact-page iframe {
-    margin-top: 30px;   
+    margin-top: 50px;   
 }
 
 /*
+@media (min-width: 1224px) {
+    .contact-page {
+        width: 50vw;
+
+    }
+}
+
+
 Monsterrat
 Lora
 Hindi Maduri
