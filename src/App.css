@@ -15,8 +15,6 @@ body {
 
 
 /* Navigation Bar */
-
-
 main {
     padding-top: 100px;
 }
@@ -68,6 +66,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 
 .banner-image {
@@ -219,11 +218,28 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #4e5154;
+    background-color: #202020;
+}
+
+.example {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.example-text {
+    font-size: 30px;
+    font-style: italic;
+
+}
+
+.example-image {
+    width: 100%;
+
 }
 
 .contact-page iframe {
-    margin-top: 50px;   
+    margin-top: 80px;   
 }
 
 /*
