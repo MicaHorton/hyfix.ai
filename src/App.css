@@ -27,20 +27,34 @@ main {
     width: 100%;
     position: fixed;
     z-index: 1;
-
 }
+
 
 .logo {
     display: flex;
     align-items: center;
-
-
 }
 
 .logo-image {
     height: 80px;
     padding: 20px;
 
+}
+
+.logo-web {
+    display: none;
+}
+
+
+@media (min-width: 1224px) {
+    .logo-web {
+        display: block;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+    
 }
 
 .menu {
@@ -242,7 +256,6 @@ iframe {
     margin-top: 80px;   
 }
 
-/*
 @media (min-width: 1224px) {
     .contact-page {
         width: 50vw;
@@ -250,7 +263,7 @@ iframe {
     }
 }
 
-
+/*
 Monsterrat
 Lora
 Hindi Maduri
