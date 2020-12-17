@@ -10,94 +10,131 @@ body {
     margin: 0;
     font-family: 'Hind Madurai', sans-serif;
     color: white;
-    position: relative;
 }
 
 
 /* Navigation Bar */
 
 main {
-    /*padding-top: 100px;*/
-    padding-top: 170px;
+    padding-top: 170px; 
+    /* Not the best solution to header being hidden by main content, 
+    but I couldn't find a better one. */
 }
-
 
 header {
     display: flex;
-    /*justify-content: space-between;*/
     justify-content: left;
     align-items: center;
 
     height: 170px;
     background-color: rgb(34,40,46, 0.8);
-    width: 100%;
-    position: fixed;
-    z-index: 0;
+    width: 100vw;
 }
 
 button.fa {
+    
     border: none;
     color: white;
     font-size: 80px;
     padding-left: 40px;
 }
 
-}
-
 .logo {
-    display: flex;
-    align-items: left;
+
 }
 
 .logo-image {
     height: 120px;
     padding-left: 20px;
-
 }
 
 .logo-web {
     display: none;
 }
 
-.menu-mobile {
+.menu {
+    display: none;
+}
+
+div.menu-overlay {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
 
     width: 100vw;
     height: 100vh;
     padding-top: 170px;
 
-    z-index: 1; 
-    opacity: 1;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(34,40,46);
 }
 
-.menu-item-mobile {
+.menu-item {
     font-size: 100px;
     color: white;
     margin-top: 20px;
 }
 
+/* 1224px */
+
+@media (min-width: 1000px) {
+
+    main {
+        padding-top: 0px;
+    }
+
+    nav {
+        position: relative; 
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgb(34,40,46, 0.8);
+        height: 100px;
+    }
+
+    header {
+        height: inherit;
+    }
+
+    button.fa {
+        display: none;
+    }
+
+    .logo-image {
+        height: 80px;
+    }
+
+    div.menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+
+        height: inherit;
+        padding-top: 0px;
+
+        position: relative;
+        z-index: 0; 
+        background-color: rgb(34,40,46);
+
+    }
 
 
-/*
-
-.menu {
-    display: flex;
-    display: none;
+    .menu-item {
+        font-size: 25px;
+        padding-right: 60px;
+        font-family: inherit;
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+        opacity: 1;
+    
+    }
 
 }
 
-.menu-item {
-    font-size: 25px;
-    padding: 30px;
-    font-family: inherit;
-    color: inherit;
-    text-decoration: none;
-    text-transform: uppercase;
-    opacity: 1;
 
-}*/
 
 /* Normal-Page Banner */
 
@@ -106,6 +143,7 @@ button.fa {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 0;
 }
 
 .banner-image {

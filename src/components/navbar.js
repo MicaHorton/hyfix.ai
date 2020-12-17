@@ -1,44 +1,45 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../App.css';
-import logo from '../media/full_logo.png';
+import logo from '../media/logo.png';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class Navbar extends Component {
   constructor (props) {
     super(props);
     this.toggleOverlay = this.toggleOverlay.bind(this);
+    this.state = {overlay: false}
   }
 
   toggleOverlay() {
-    document.body.style.backgroundColor = 'white';
+    console.log('Button clicked');
+    this.setState({overlay: !this.state.overlay});
   }
 
   render() {
   
-
     return (
           <nav>
 
               <header>
-                <button className='fa fa-bars'></button>
-                <Link to='/' className='logo'>
+                <button className='fa fa-bars' onClick={() => this.toggleOverlay()}></button>
+                <Link to='/' className='logo' onClick={() => this.toggleOverlay()}>
                   <img className='logo-image' src={logo} alt='logo'/>
                 </Link>
               </header>
 
-              <div className='menu-mobile'>
-                <Link to='/applications' className='menu-item-mobile'>Applications</Link>
-                <Link to='/network' className='menu-item-mobile'>Network</Link>
-                <Link to='/technology' className='menu-item-mobile'>Technology</Link>
-                <Link to='/contact' className='menu-item-mobile'>Contact</Link>
+              <div className={` ${'menu'} ${this.state.overlay && `menu-overlay`} `}>
+                <Link to='/applications' className='menu-item' onClick={() => this.toggleOverlay()}>Applications</Link>
+                <Link to='/network' className='menu-item' onClick={() => this.toggleOverlay()}>Network</Link>
+                <Link to='/technology' className='menu-item' onClick={() => this.toggleOverlay()}>Technology</Link>
+                <Link to='/contact' className='menu-item' onClick={() => this.toggleOverlay()}>Contact</Link>
               </div>
            
           </nav>
     );
 
   }
-  
+
 }
 
 /*
