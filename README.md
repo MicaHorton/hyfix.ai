@@ -46,6 +46,13 @@ https://medium.com/@maison.moa/setting-up-an-express-backend-server-for-create-r
 https
 https://stackoverflow.com/questions/11744975/enabling-https-on-express-js
 
+FontAwesome
+https://www.geeksforgeeks.org/how-to-use-font-awesome-icons-from-node-modules/
+
+two version of the package:
+- fontawesome (which requires annoying react import thing)
+- font-awesome (which can be used like normal)
+
 # Options
 
 1) try using npm serve. first https locally then try to deploy
