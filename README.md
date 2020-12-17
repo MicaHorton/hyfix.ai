@@ -1,5 +1,8 @@
 
 # Current Deployement Method
+
+ALSO MAKE FAVICON REAPPEAR
+
 Deploy Tutorial: https://medium.com/dev-genius/deploy-a-reactjs-application-to-aws-ec2-instance-using-aws-codepipeline-3df5e4157028
 
 Solution To Deployement Issues:
