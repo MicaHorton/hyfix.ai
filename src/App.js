@@ -8,6 +8,7 @@ import Applications from "./components/applications.js";
 import Network from "./components/network.js";
 import Technology from "./components/technology.js";
 import Contact from "./components/contact.js";
+import Store from "./components/store.js";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Route path='/network' exact component={Network} />
       <Route path='/technology' exact component={Technology} />
       <Route path='/contact' exact component={Contact} />
+      <Route path='/store' exact component={Store} />
 
     </Router>
   );

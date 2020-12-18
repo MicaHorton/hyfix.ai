@@ -1,5 +1,19 @@
 
+# Notes
+
+- image height has to be set to auto, otherwise text will run over it, won't be part of normal flow on mobile
+- also, flexbox problems with mobile?
+- i'm not sure if I like the centered text on web
+- or sticky header on mobile
+- visually center things by making them a little higher than usual (that should be baked into css protocol)
+
+nav is one layer 1
+so is menu overlay
+
 # Current Deployement Method
+
+ALSO MAKE FAVICON REAPPEAR
+
 Deploy Tutorial: https://medium.com/dev-genius/deploy-a-reactjs-application-to-aws-ec2-instance-using-aws-codepipeline-3df5e4157028
 
 Solution To Deployement Issues:
@@ -45,6 +59,13 @@ https://medium.com/@maison.moa/setting-up-an-express-backend-server-for-create-r
 
 https
 https://stackoverflow.com/questions/11744975/enabling-https-on-express-js
+
+FontAwesome
+https://www.geeksforgeeks.org/how-to-use-font-awesome-icons-from-node-modules/
+
+two version of the package:
+- fontawesome (which requires annoying react import thing)
+- font-awesome (which can be used like normal)
 
 # Options
 
