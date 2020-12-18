@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Navbar from "./components/navbar.js";
 import Promotion from "./components/promotion.js";
@@ -10,11 +10,10 @@ import Technology from "./components/technology.js";
 import Contact from "./components/contact.js";
 import Store from "./components/store.js";
 
+import Add from "./components/add.js";
 
-function App() {
-  return (
-    <Router>
-
+const Default = () => (
+  <Router>
       <Navbar />
 
       <Route path='/' exact component={Company} />
@@ -25,7 +24,30 @@ function App() {
       <Route path='/contact' exact component={Contact} />
       <Route path='/store' exact component={Store} />
 
-    </Router>
+  </Router>
+);
+
+
+const Admin = () => (
+  <div>
+    <Switch>
+      <Route exact path='/admin/add' component={Add} />
+
+    </Switch>
+      
+  </div>
+);
+
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path='/admin' component={Admin}/>
+        <Route component={Default}/>
+      </Switch>
+   </Router>
+    
   );
 }
 
