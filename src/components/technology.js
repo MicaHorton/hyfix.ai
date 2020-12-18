@@ -10,8 +10,8 @@ export default class Technology extends Component {
     return (
         <main>
           <header className='banner'>
-            <img className='banner-image' src={technology_banner} alt='logo'/>
-            <h1 className='banner-text'>Technologies<br/> Shaping the Future</h1>
+            <img className='banner-image tech' src={technology_banner} alt='logo'/>
+            <h1 className='banner-text tech'>Technologies<br/> Shaping the Future</h1>
           </header>
 
           <div className='list section-dark'>

@@ -11,8 +11,6 @@ export default class Company extends Component {
             <img className='banner-image' src={company_banner} alt='logo'/>
             <h1 className='banner-text'>Precision As A Service</h1>
           </header>
-          
-
         
           <section className='section section-dark'>
             <h2 className='section-text'>HYFIX is embarking on a mission to democratize sensor data by making it globally available, accessible, 
