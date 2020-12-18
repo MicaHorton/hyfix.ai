@@ -1,42 +1,54 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../App.css';
-import full_logo from '../media/full_logo.png';
-import half_logo from '../media/half_logo.png';
-/*
-import Image from '../cover-image.jpg';
-<img src={Image} alt='website header'/>
-*/
-
+import logo from '../media/full_logo.png';
+import 'font-awesome/css/font-awesome.min.css';
 
 export default class Navbar extends Component {
-  render() {
-    return (
-
-          <nav className='nav'>
-              <Link to='/' className='logo'>
-                <img className='logo-image logo-web' src={full_logo} alt='logo'/>
-                <img className='logo-image logo-mobile' src={half_logo} alt='logo'/>
-              </Link>
-              
-              <div className='menu'>
-                <Link to='/applications' className='menu-item'>Applications</Link>
-                <Link to='/network' className='menu-item'>Network</Link>
-                <Link to='/technology' className='menu-item'>Technology</Link>
-                <Link to='/contact' className='menu-item'>Contact</Link>
-              </div>
-
-
-          </nav>
-
-      
-    );
+  constructor (props) {
+    super(props);
+    this.toggleOverlay = this.toggleOverlay.bind(this);
+    this.state = {overlay: false}
   }
+
+  toggleOverlay() {
+    console.log('Button clicked');
+    this.setState({overlay: !this.state.overlay});
+  }
+
+  render() {
+  
+    return (
+          <nav className='nav'>
+
+              <header>
+                <button className='fa fa-bars' onClick={() => this.toggleOverlay()}></button>
+                <Link to='/' className='logo' onClick={() => this.toggleOverlay()}>
+                  <img className='logo-image' src={logo} alt='logo'/>
+                </Link>
+              </header>
+
+              <div className={` ${'menu'} ${this.state.overlay && `menu-overlay`} `}>
+                <Link to='/applications' className='menu-item' onClick={() => this.toggleOverlay()}>Applications</Link>
+                <Link to='/network' className='menu-item' onClick={() => this.toggleOverlay()}>Network</Link>
+                <Link to='/technology' className='menu-item' onClick={() => this.toggleOverlay()}>Technology</Link>
+                <Link to='/contact' className='menu-item' onClick={() => this.toggleOverlay()}>Contact</Link>
+                
+              </div>
+           
+          </nav>
+    );
+
+  }
+
 }
 
 /*
-Jess
-Buissness
-Sports
-Transfer 4 Year College
+
+on click: 
+toggle
+  which button rendered
+  background overlay color
+  which menu style to use
+<img className='logo-image logo-mobile' src={half_logo} alt='logo'/>
 */
