@@ -19,7 +19,7 @@ export default class Navbar extends Component {
   render() {
   
     return (
-          <nav>
+          <nav className='nav'>
 
               <header>
                 <button className='fa fa-bars' onClick={() => this.toggleOverlay()}></button>
@@ -33,6 +33,7 @@ export default class Navbar extends Component {
                 <Link to='/network' className='menu-item' onClick={() => this.toggleOverlay()}>Network</Link>
                 <Link to='/technology' className='menu-item' onClick={() => this.toggleOverlay()}>Technology</Link>
                 <Link to='/contact' className='menu-item' onClick={() => this.toggleOverlay()}>Contact</Link>
+                
               </div>
            
           </nav>

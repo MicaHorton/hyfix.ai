@@ -1,4 +1,15 @@
 
+# Notes
+
+- image height has to be set to auto, otherwise text will run over it, won't be part of normal flow on mobile
+- also, flexbox problems with mobile?
+- i'm not sure if I like the centered text on web
+- or sticky header on mobile
+- visually center things by making them a little higher than usual (that should be baked into css protocol)
+
+nav is one layer 1
+so is menu overlay
+
 # Current Deployement Method
 
 ALSO MAKE FAVICON REAPPEAR
