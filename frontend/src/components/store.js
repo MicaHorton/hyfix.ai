@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import company_banner from '../media/company_banner.jpeg';
 import 'font-awesome/css/font-awesome.min.css';
 
-
-
 export default class Store extends Component {
     constructor (props) {
         super(props);
@@ -27,7 +25,7 @@ export default class Store extends Component {
             <main>
                 <nav>
                     <Link to='#' className='fa fa-shopping-cart'></Link>
-                    <Link to='#' className='fas fa-filter' onClick={() => this.goBack()}></Link>
+                    <Link to='#' className='fas fa-filter'></Link>
                 </nav>
 
                 
