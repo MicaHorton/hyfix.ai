@@ -1,14 +1,6 @@
 # Notes
 
-## General
-
-- API
-  - REST: web type one
-  - SOAP: other one
-
-<https://zsvumedjri.execute-api.us-east-2.amazonaws.com/latest>
-
-## Unsolved Buts
+## Unsolved Bugs
 
 - So werid: state of image won't change unless uploaded twice?
 
@@ -23,11 +15,32 @@
 - I should make API a subdomain of hyfix and not have to deal with CORS. also, ssl?
 - Should I implement max-length or some kind of data sanitization for the MongoDB thing?
 - Also, I should probably tighten up the ip address rules.
+- Also, setup better logs.
 
-- Should I center the text on web like I did on mobile?
+- Should I center the text on web like I did on mobile? Yes
+- Size of the images and amount of information: should there be a seperate product page?
+Rectangle image, square thingo
+
 - Also, maybe I should visually center things by making them a little higher than usual (that should be baked into css protocol)?
+- Are the categories mutually exclusive? Yes they are.
+- Also, do categories change a lot, need to be dynamic? NO.
 
-## Shopping Module Research
+## About MERN
+
+- API
+  - REST: web type one
+  - SOAP: other one
+
+How To Structure (!!)
+<https://stackoverflow.com/questions/51126472/how-to-organise-file-structure-of-backend-and-frontend-in-mern>
+
+Subdomain vs Subdirectory
+<https://theguidex.com/subdomain-vs-subdirectory/>
+
+Lifting State Up
+<https://reactjs.org/docs/lifting-state-up.html>
+
+## Payment Modules
 
 POWR
 <https://www.powr.io/pricing>
@@ -54,13 +67,27 @@ setup basic MongoDB backend
 setup frontend product filtering
 connect to Stripe for payments
 
-## Other Resources
+### Stripe
 
-How To Structure (!!)
-<https://stackoverflow.com/questions/51126472/how-to-organise-file-structure-of-backend-and-frontend-in-mern>
+Stripe.js Docs
+<https://stripe.com/docs/stripe-js>
 
-Subdomain vs Subdirectory
-<https://theguidex.com/subdomain-vs-subdirectory/>
+Stripe Checkout vs. Stripe.js
+<https://alligator.io/react/payments-stripe-checkout-react/>
+
+Stripe Elements
+<https://www.mitrahsoft.com/index.cfm/blog/Stripe-Payment-API-Using-ReactJS-NodeJS>
+
+Fast Forms
+<https://codenebula.io/node.js/stripe/2020/03/03/how-to-set-up-a-basic-node-application-with-stripe/>
+
+Stripe Checkout
+<https://www.section.io/engineering-education/stripe-integration-react/>
+
+## Deployement
+
+API Url
+<https://zsvumedjri.execute-api.us-east-2.amazonaws.com/latest>
 
 Deploy Express API with Claudia
 <https://medium.com/@johndyer24/simple-steps-to-deploy-an-express-server-to-aws-lambda-with-claudia-js-26c25f8745b5>
@@ -104,3 +131,9 @@ No Voice Tutorial
 
 Video, No Code Tutorial
 <https://www.youtube.com/watch?v=dapS3HkX3Wc>
+
+## Categories
+
+- Boards (3-5)
+- INS Systems (3-5)
+- Survey Systems (3-5)

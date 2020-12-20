@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import axios from 'axios';
-import Filter from './filter.js';
+
 
 const Product = props => (
     <article>
-        <Link to={{pathname: '/single/' + props.item._id,}} 
+        <Link to={{pathname: '/store/single/', hash: props.item._id}} 
               className='product-header'>{props.item.name}</Link>
               
         <div className='fake-image'></div>
@@ -19,8 +19,7 @@ const Product = props => (
 export default class Store extends Component {
     constructor (props) {
         super(props);
-        this.state = { products: [] , showFilter: false};
-        this.toggleFilter = this.toggleFilter.bind(this);
+        this.state = { products: [] };
         this.listAll = this.listAll.bind(this);
     }
 
@@ -34,9 +33,7 @@ export default class Store extends Component {
              })
     }
 
-    toggleFilter() {
-        this.setState({showFilter: !this.state.showFilter});
-    }
+    
 
     listAll() {
         return this.state.products.map(current => {
@@ -48,16 +45,8 @@ export default class Store extends Component {
     render() {
         return (
 
-            <main className='store-page'>
-                <nav className='store-nav'>
-                    <Link to='/cart' className='fa fa-shopping-cart'></Link>
-                    <Link to='#' className='fa fa-filter' onClick={() => this.toggleFilter()}></Link>
-                </nav>
-
-                {this.listAll()}
-
-                <Filter showSelf={this.state.showFilter} toggleFilter={this.toggleFilter}/>
-                
+            <main className='products-page'>
+                {this.listAll()}      
             </main>   
  
         );

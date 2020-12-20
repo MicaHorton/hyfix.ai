@@ -1,31 +1,43 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 export default class Single extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
-        console.log(this.props.location.state);
-
+        this.state = { productId: this.props.location.hash.split('#').pop(),
+                       productInfo: {} };
      }
 
+
     componentDidMount() {
-        /*
-        axios.get('https://zsvumedjri.execute-api.us-east-2.amazonaws.com/latest/products/') 
+
+        axios.get('https://zsvumedjri.execute-api.us-east-2.amazonaws.com/latest/products/'
+                 + this.state.productId)
             .then(response => {
-                this.setState({ products: response.data });
+                console.log('Single product data fetched')
+                this.setState({ productInfo: response.data });
             })
             .catch((error) => {
                 console.log(error);
-             })*/
+             })
     }
     
     render() {
+
+    
         return (
             <main>
-                <h1>Single</h1>
-                
+                <article>
+                    <h1>{this.state.productInfo.name} </h1>
+
+                    <div className='fake-image'></div>
+                    <h2>price: $ {this.state.productInfo.price}</h2>
+                    <h3>{this.state.productInfo.description}</h3>
+                    <button>Add To Cart</button>
+
+                </article>
             </main>
      
         );

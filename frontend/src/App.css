@@ -27,6 +27,7 @@ nav {
     position: fixed;
     z-index: 1;
 }
+
 header {
     display: flex;
     justify-content: left;
@@ -61,18 +62,6 @@ button.fa {
 
 .logo-web {
     display: none;
-}
-
-
-@media (min-width: 1224px) {
-    .logo-web {
-        display: block;
-    }
-
-    .logo-mobile {
-        display: none;
-    }
-    
 }
 
 .menu {
@@ -387,9 +376,32 @@ input {
     margin-left: 0;
 }
 
-/* Store Page */
+/* Store Buttons */
 
-.store-page {
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: static;
+    background-color: #202020;
+    padding-top: 150px;
+
+    width: 100vw;
+    height: 10vh; 
+    
+}
+
+.buttons > .fa {
+    color: white;
+    font-size: 60px;
+    padding: 30px;
+}
+
+/* Store Products */
+
+.products-page {
+    margin-top: 0px;
+    padding-top: 0px;
     position: static;
     display: flex;
     flex-direction: column;
@@ -397,28 +409,6 @@ input {
     width: 100vw;
     height: 100%;  
 }
-
-.store-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: static;
-    background-color: #202020;
-    z-index: 0;
-
-    width: 100vw;
-    height: 5vh; 
-    padding-top: 1vh;
-    padding-bottom: 3vh;   
-    
-}
-
-.store-nav > .fa {
-    color: white;
-    font-size: 60px;
-    padding: 30px;
-}
-
 
 article {
     width: 80vw;
@@ -485,6 +475,8 @@ article > h3 {
     margin-left: 40px;
 
 }
+
+
 /*
 Monsterrat
 Lora
