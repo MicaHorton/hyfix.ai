@@ -64,8 +64,3 @@ class Single extends Component {
 }
 
 export default withCookies(Single);
-
-/*
-,
-                       user: this.props.cookies.get('user') || ''
-*/

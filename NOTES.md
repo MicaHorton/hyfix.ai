@@ -16,6 +16,7 @@
 - Should I implement max-length or some kind of data sanitization for the MongoDB thing?
 - Also, I should probably tighten up the ip address rules.
 - Also, setup better logs.
+- I should use Redux and Ant Design (or some other prebuilt components thing) the next project.
 
 - Should I center the text on web like I did on mobile? Yes
 - Size of the images and amount of information: should there be a seperate product page?
