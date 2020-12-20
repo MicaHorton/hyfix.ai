@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import company_banner from '../media/company_banner.jpeg';
+import company_banner from '../../media/company_banner.jpeg';
 
 
 export default class Company extends Component {

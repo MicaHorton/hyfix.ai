@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import company_banner from '../media/company_banner.jpeg';
-import example from '../media/example.png';
 
 export default class Contact extends Component {
   render() {

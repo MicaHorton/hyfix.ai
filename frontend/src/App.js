@@ -1,40 +1,50 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import Navbar from "./components/navbar.js";
-import Promotion from "./components/promotion.js";
-import Company from "./components/company.js";
-import Applications from "./components/applications.js";
-import Network from "./components/network.js";
-import Technology from "./components/technology.js";
-import Contact from "./components/contact.js";
-import Store from "./components/store.js";
+/* Default Components */
+import Navbar from "./components/default/navbar.js";
+import Promotion from "./components/default/promotion.js";
+import Company from "./components/default/company.js";
+import Applications from "./components/default/applications.js";
+import Network from "./components/default/network.js";
+import Technology from "./components/default/technology.js";
+import Contact from "./components/default/contact.js";
 
-import Add from "./components/add.js";
+/* Store Components */
+import Store from "./components/store/store.js";
+import Single from "./components/store/single.js";
+import Cart from "./components/store/cart.js";
+import Checkout from "./components/store/checkout.js";
 
-const Default = () => (
-  <Router>
-      <Navbar />
 
+/* Admin Components */
+import Add from "./components/admin/add.js";
+
+const defaultRouter = () => (
+  <div>
+      <Navbar path='/' />
       <Route path='/' exact component={Company} />
+
       <Route path='/promotion' exact component={Promotion} />
       <Route path='/applications' exact component={Applications} />
       <Route path='/network' exact component={Network} />
       <Route path='/technology' exact component={Technology} />
       <Route path='/contact' exact component={Contact} />
-      <Route path='/store' exact component={Store} />
-
-  </Router>
+  </div>
 );
 
-
-const Admin = () => (
+const storeRouter = () => (
   <div>
-    <Switch>
-      <Route exact path='/admin/add' component={Add} />
+      <Route path='/store' exact component={Store} />
+      <Route path='/store/single' exact component={Single} />
+      <Route path='/store/cart' exact component={Cart} />
+      <Route path='/store/checkout' exact component={Checkout} />
+  </div>
+);
 
-    </Switch>
-      
+const adminRouter = () => (
+  <div>
+      <Route exact path='/admin/add' component={Add} />
   </div>
 );
 
@@ -42,10 +52,12 @@ const Admin = () => (
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path='/admin' component={Admin}/>
-        <Route component={Default}/>
-      </Switch>
+
+        <Route component={defaultRouter}/>
+        <Route component={storeRouter}/>    
+        <Route component={adminRouter}/>
+
+        
    </Router>
     
   );

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import network_banner from '../media/network_banner.jpg';
+import network_banner from '../../media/network_banner.jpg';
 
 export default class Network extends Component {
   render() {

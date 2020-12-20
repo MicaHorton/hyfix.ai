@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import base from '../media/base.jpg';
+import base from '../../media/base.jpg';
 
 
 export default class About extends Component {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import technology_banner from '../media/technology_banner.jpg';
-import rtk_gnss_icon from '../media/rtk_gnss_icon.png';
-import sensor_fusion_icon from '../media/sensor_fusion_icon.png'
-import lora_icon from '../media/lora_icon.webp'
-import blockchain_icon from '../media/blockchain_icon.png';
+import technology_banner from '../../media/technology_banner.jpg';
+import rtk_gnss_icon from '../../media/rtk_gnss_icon.png';
+import sensor_fusion_icon from '../../media/sensor_fusion_icon.png'
+import lora_icon from '../../media/lora_icon.webp'
+import blockchain_icon from '../../media/blockchain_icon.png';
 
 export default class Technology extends Component {
   render() {

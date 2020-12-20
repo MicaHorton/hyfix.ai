@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import applications_banner from '../media/applications_banner.png';
+import applications_banner from '../../media/applications_banner.png';
 
 export default class Applications extends Component {
   render() {
