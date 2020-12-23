@@ -20,7 +20,7 @@ export default class Filter extends Component {
 
         return (
             <nav className='store-filter'>
-                <Link to='#' className='fa fa-times' onClick={() => this.handleChange()}></Link>
+                <div className='fa fa-times' onClick={() => this.handleChange()}></div>
 
                 <Link to='/store/all'>All Products</Link>
                 <Link to={{pathname: '/store/category', search: 'boards'}}>Boards</Link>

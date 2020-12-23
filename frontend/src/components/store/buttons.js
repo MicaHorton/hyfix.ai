@@ -19,7 +19,7 @@ export default class Buttons extends Component {
         return(
             <nav className='buttons'>
                 <Link to='/store/cart' className='fa fa-shopping-cart'></Link>
-                <Link to='#' className='fa fa-filter' onClick={() => this.toggleFilter()}></Link>
+                <div className='fa fa-filter' onClick={() => this.toggleFilter()}></div>
 
                 <Filter showSelf={this.state.showFilter} toggleFilter={this.toggleFilter}/>
             </nav>

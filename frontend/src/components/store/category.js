@@ -12,7 +12,6 @@ export default class Category extends Component {
         this.listProducts = this.listProducts.bind(this);
         this.getProducts = this.getProducts.bind(this);
         this.getProducts();
-        
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -52,7 +51,7 @@ export default class Category extends Component {
         }
 
         return (
-            <main className='product-page'>
+            <main className='products-page'>
                 {this.listProducts()}
             </main>
         );

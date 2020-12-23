@@ -397,7 +397,68 @@ input {
     padding: 30px;
 }
 
-/* Store Products */
+.buttons > .fa.fa-filter {
+    margin-right: 15px;
+}
+
+@media (min-width: 1224px) {
+    .buttons {
+        padding-top: 120px;
+    } 
+}
+
+/* Store Filter */
+
+.store-filter {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    right: 0;
+    
+    background-color: white;
+    width: 70vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.store-filter > .fa-times {
+    font-size: 100px;
+    color: #202020;
+    margin-top: 20px;
+    margin-left: 40px;
+    align-self: flex-start;
+}
+
+.store-filter > a {
+    font-size: 60px;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.store-filter > a:first-child {
+    margin-top: 60px;
+}
+
+@media (min-width: 1224px) {
+    .store-filter {
+        width: 30vw;
+    }
+
+    .store-filter > .fa-times {
+        font-size: 60px;
+        margin-left: 20px;
+    }
+
+    .store-filter > a {
+        font-size: 35px;
+    }
+}
+
+
+/* Products Page (Store, Category & Single) */
 
 .products-page {
     margin-top: 0px;
@@ -455,33 +516,46 @@ article > h3 {
     background-color: blue;
 }
 
-/* Store Filter */
+@media (min-width: 1224px) {
+    .products-page {
+        margin-top: 40px;
+    }
+}
 
-.store-filter {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    right: 0;
-    
-    background-color: white;
-    width: 70vw;
-    height: 100vh;
+/* Single Page Adjustments */
 
+.checkout-button {
+    color: blue;
+
+}
+
+/* Cart Page */
+
+.cart-page {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 0;
 }
 
-.store-filter > .fa-times {
-    font-size: 100px;
-    color: #202020;
-    margin-top: 20px;
-    margin-left: 40px;
+.cart-item {
+    width: 80vw;
+    height: 20vw;
+
+    display: flex;
+    flex-direction: row;
 }
 
-.store-filter > a {
+.cart-item > .fake-image {
+    width: 100px;
+}
+
+.cart-item > h1 {
     font-size: 20px;
 }
-
+.no-items {
+    font-size: 40px;
+}
 
 /*
 Monsterrat
