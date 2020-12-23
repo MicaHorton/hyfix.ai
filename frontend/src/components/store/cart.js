@@ -13,7 +13,6 @@ const Item = props => (
 )
 
 class Cart extends Component {
-
     constructor(props) {
         super(props);
 
@@ -26,25 +25,23 @@ class Cart extends Component {
     }
 
     listItems() {
-
         if (this.state.items) {
             return this.state.items.map(current => {
                 return <Item item={current} key={current._id}/>;
             })
+            
         } else {
             return <p>No Items in Cart</p>
         }
         
     }
 
-
-
     render() {
         return (
             <main className='cart-page'>
 
                 {this.listItems()}
-                <Link to='/checkout'>Checkout</Link>
+                <Link to='/store/checkout'>Checkout</Link>
 
             </main>
 

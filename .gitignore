@@ -12,6 +12,7 @@
 
 # production
 /build
+/backend/.aws-sam
 
 # misc
 .DS_Store

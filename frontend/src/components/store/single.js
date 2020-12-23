@@ -9,7 +9,6 @@ class Single extends Component {
         this.state = { productId: this.props.location.hash.split('#').pop(),
                        productInfo: {} };
         this.addToCart = this.addToCart.bind(this);
-            
      }
 
     addToCart() {
@@ -30,9 +29,8 @@ class Single extends Component {
     }
 
     componentDidMount() {
-
-        axios.get('https://zsvumedjri.execute-api.us-east-2.amazonaws.com/latest/products/'
-                 + this.state.productId)
+        axios.get('https://zsvumedjri.execute-api.us-east-2.amazonaws.com/latest/products/single/'
+                  + this.state.productId)
             .then(response => {
                 console.log('Single product data fetched')
                 this.setState({ productInfo: response.data });
@@ -40,12 +38,11 @@ class Single extends Component {
             .catch((error) => {
                 console.log(error);
              })
+
     }
     
     render() {
-
-    
-        return (
+          return (
             <main>
                 <article>
                     <h1>{this.state.productInfo.name} </h1>
@@ -55,6 +52,7 @@ class Single extends Component {
                     <h3>{this.state.productInfo.description}</h3>
                     <p>Hello</p>
                     <button onClick={() => this.addToCart()}>Add To Cart</button>
+                    <img src='https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/hello2.jpg' alt='hello'></img>
 
                 </article>
             </main>

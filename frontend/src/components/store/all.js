@@ -1,30 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import axios from 'axios';
+import Card from './card.js';
 
-
-const Product = props => (
-    <article>
-        <Link to={{pathname: '/store/single/', hash: props.item._id}} 
-              className='product-header'>{props.item.name}</Link>
-              
-        <div className='fake-image'></div>
-        <h2>price: $ {props.item.price}</h2>
-        <h3>{props.item.description}</h3>
-        
-    </article>
-)
-
-export default class Store extends Component {
+export default class All extends Component {
     constructor (props) {
         super(props);
         this.state = { products: [] };
-        this.listAll = this.listAll.bind(this);
+        this.listProducts = this.listProducts.bind(this);
     }
 
     componentDidMount() {
-        axios.get('https://zsvumedjri.execute-api.us-east-2.amazonaws.com/latest/products/') 
+        axios.get('https://api.hyfix.ai/products') 
             .then(response => {
                 this.setState({ products: response.data });
             })
@@ -33,20 +20,17 @@ export default class Store extends Component {
              })
     }
 
-    
-
-    listAll() {
+    listProducts() {
         return this.state.products.map(current => {
-            return <Product item={current} key={current._id}/>;
+            return <Card item={current} key={current._id}/>;
         })
     }
-
 
     render() {
         return (
 
             <main className='products-page'>
-                {this.listAll()}      
+                {this.listProducts()}      
             </main>   
  
         );

@@ -14,7 +14,6 @@ export default class Filter extends Component {
     }
 
     render() {  
-
         if (!this.props.showSelf) {
             return null;
         }
@@ -22,10 +21,11 @@ export default class Filter extends Component {
         return (
             <nav className='store-filter'>
                 <Link to='#' className='fa fa-times' onClick={() => this.handleChange()}></Link>
-                <h2></h2>
-                <h2></h2>
-                <h2></h2>
-                <h2></h2>
+
+                <Link to='/store/all'>All Products</Link>
+                <Link to={{pathname: '/store/category', search: 'boards'}}>Boards</Link>
+                <Link to={{pathname: '/store/category/', search: 'ins'}}> INS Systems</Link>
+                <Link to={{pathname: '/store/category/', search: 'survey'}}>Survey Systems</Link>
             </nav>
         );
     }

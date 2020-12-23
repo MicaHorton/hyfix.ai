@@ -1,5 +1,13 @@
 # Notes
 
+<https://1uzsz611cb.execute-api.us-west-1.amazonaws.com/latest/products>
+
+## To-Do For Today
+
+- Refactor code
+- Finish categories
+- Polish frontend? or start images
+
 ## Unsolved Bugs
 
 - So werid: state of image won't change unless uploaded twice?
@@ -9,6 +17,8 @@
 - Image height has to be set to auto. Otherwise, text will run over it and it won't be part of normal flow on mobile.
 - NPM Deploy Error. Just run NPM install to update package.json file
 - Different deployed version renders different from local. Clear cache. Possibly install extension to fix this.
+- Categories not fetched on mobile. Need to use deployed api, not localhost.
+- Claudia.js internal server error. Bcrypt package had operating system/versioning problems (resulting in invalid elf headers), use bcrypt.js
 
 ## Design Contemplations
 
@@ -87,6 +97,10 @@ Stripe Checkout
 
 ## Deployement
 
+Claudia
+Serverless
+AWS SAM
+
 API Url
 <https://zsvumedjri.execute-api.us-east-2.amazonaws.com/latest>
 
@@ -94,29 +108,23 @@ Deploy Express API with Claudia
 <https://medium.com/@johndyer24/simple-steps-to-deploy-an-express-server-to-aws-lambda-with-claudia-js-26c25f8745b5>
 
 Claudia Docs
-<https://medium.com/@johndyer24/simple-steps-to-deploy-an-express-server-to-aws-lambda-with-claudia-js-26c25f8745b5>
+<https://www.claudiajs.com/documentation.html>
 
 ## Subdomains
 
-Creating Subdomains
-<https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-routing-traffic-for-subdomains.html#dns-routing-traffic-for-subdomains-creating-hosted-zone>
-
-- basically create the a new hosted zone with the name of the subdomain
+1) create the a new hosted zone with the name of the subdomain
 then create a simple record that routes the subdomain to the nameservers
 of the new hosted zone
+2) then go into custom domain section of API gateway and add one
+3) then create an A Alias record that points to the gateway
+
+Creating Subdomains
+<https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-routing-traffic-for-subdomains.html#dns-routing-traffic-for-subdomains-creating-hosted-zone>
 
 Connecting Subdomain to API
 <https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html>
 
 - hostname portion of the URL (that is, api-id.execute-api.region.amazonaws.com) refers to an API endpoint.
-
-- what I think you're supposed to do
-  - go into custom domain section of API gateway and add one
-  - then create an A Alias record that points to the gateway
-
-Serverless
-AWS SAM
-Claudia
 
 ## Images
 

@@ -1,25 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 /* General Components */
-import Navbar from "./components/general/navbar.js";
-import Promotion from "./components/general/promotion.js";
-import Company from "./components/general/company.js";
-import Applications from "./components/general/applications.js";
-import Network from "./components/general/network.js";
-import Technology from "./components/general/technology.js";
-import Contact from "./components/general/contact.js";
+import Navbar from './components/general/navbar.js';
+import Promotion from './components/general/promotion.js';
+import Company from './components/general/company.js';
+import Applications from './components/general/applications.js';
+import Network from './components/general/network.js';
+import Technology from './components/general/technology.js';
+import Contact from './components/general/contact.js';
 
 /* Store Components */
 
-import Products from "./components/store/products.js";
-import Single from "./components/store/single.js";
-import Cart from "./components/store/cart.js";
-import Checkout from "./components/store/checkout.js";
-import Buttons from "./components/store/buttons.js";
+import All from './components/store/all.js';
+import Single from './components/store/single.js';
+import Cart from './components/store/cart.js';
+import Checkout from './components/store/checkout.js';
+import Buttons from './components/store/buttons.js';
+import Category from './components/store/category.js'
 
 /* Admin Components */
-import Add from "./components/admin/add.js";
+import Add from './components/admin/add.js';
 
 const websiteRouter = () => (
   <div>
@@ -33,7 +34,8 @@ const websiteRouter = () => (
       <Route path='/contact' exact component={Contact} />
 
       <Route path='/store' component={Buttons} />
-      <Route path='/store' exact component={Products} />
+      <Route path='/store/all' component={All} />
+      <Route path='/store/category' component={Category} />
       <Route path='/store/single' component={Single} />
       <Route path='/store/cart' exact component={Cart} />
       <Route path='/store/checkout' exact component={Checkout} />

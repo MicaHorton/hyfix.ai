@@ -5,7 +5,6 @@ import 'font-awesome/css/font-awesome.min.css';
 import Filter from './filter.js';
 
 export default class Buttons extends Component {
-
     constructor (props) {
         super(props);
         this.state = { showFilter: false};
