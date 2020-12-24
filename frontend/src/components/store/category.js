@@ -19,6 +19,8 @@ export default class Category extends Component {
         if (state.category !== currentCategory) {
             return { category: currentCategory, categoryChanged: true }
         }
+
+        return null;
         
     }
 
