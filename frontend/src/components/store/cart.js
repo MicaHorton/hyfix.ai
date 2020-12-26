@@ -6,9 +6,9 @@ import lodash from 'lodash';
 
 const Item = props => (
     <article className='cart-item'>
-        <h1>{props.item.name}</h1>
         <div className='fake-image'></div>
-        <h2>price: $ {props.item.price}</h2>
+        <h1>{props.item.name}</h1>
+        <h2>$ {props.item.price}</h2>
     </article>
 )
 
@@ -96,7 +96,7 @@ class Cart extends Component {
             return (
                 <main className='products-page'>
                     {this.state.renderedItems}
-                    <Link to='/store/checkout'>Checkout</Link>
+                    <Link to='/store/checkout' className='button checkout-button'>Checkout</Link>
                 </main>
             );
 

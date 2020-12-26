@@ -13,9 +13,26 @@ body {
 
 }
 
+.button {
+    width: 200px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: #553d88;
+    color: white;
+}
+
 .fa {
     text-decoration: none;
     
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Navigation Bar */
@@ -490,7 +507,8 @@ article > * {
 
 .product-header {
     font-size: 50px;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     text-decoration: none;
     font-weight: 700;
 
@@ -500,6 +518,7 @@ article > h2 {
     align-self: flex-start;
     margin-left: 10%;
     margin-top: 5px;
+    margin-bottom: 0px;
 
 }
 
@@ -524,9 +543,8 @@ article > h3 {
 
 /* Single Page Adjustments */
 
-.checkout-button {
-    color: blue;
-
+.add-button {
+    font-size: 25px;
 }
 
 /* Cart Page */
@@ -544,18 +562,38 @@ article > h3 {
 
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .cart-item > .fake-image {
-    width: 100px;
+    width: 220px;
+    height: 110px;
+    margin-left: 40px;
 }
 
 .cart-item > h1 {
-    font-size: 20px;
+    font-size: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    width: 200px;
 }
+
+.cart-item > h2 {
+    align-self: initial;
+    margin-left: 170px;
+    font-size: 30px;
+}
+
 .no-items {
     font-size: 40px;
 }
+
+.checkout-button {
+    font-size: 40px; 
+}
+
 
 /*
 Monsterrat

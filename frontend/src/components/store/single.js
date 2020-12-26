@@ -43,12 +43,12 @@ class Single extends Component {
           return (
             <main className='products-page'>
                 <article>
-                    <h1 className='product-header'>{this.state.productInfo.name} </h1>
+                    <h1 className='product-header'>{this.state.productInfo.name}</h1>
 
                     <div className='fake-image'></div>
                     <h2>price: $ {this.state.productInfo.price}</h2>
                     <h3>{this.state.productInfo.description}</h3>
-                    <button className='checkout-button' onClick={() => this.addToCart()}>Add To Cart</button>
+                    <button className='button add-button' onClick={() => this.addToCart()}>Add To Cart</button>
 
                 </article>
             </main>

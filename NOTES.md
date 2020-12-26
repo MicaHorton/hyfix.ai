@@ -19,6 +19,7 @@
 - Different deployed version renders different from local. Clear cache. Possibly install extension to fix this.
 - Categories not fetched on mobile. Need to use deployed api, not localhost.
 - Claudia.js internal server error. Bcrypt package had operating system/versioning problems (resulting in invalid elf headers), use bcrypt.js
+- Array that has data as a whole, but each piece is undefined. Console.log updates multi-part objects after the fact, but not primitive data types
 
 ## Design Contemplations
 
