@@ -41,7 +41,7 @@ class Single extends Component {
     
     render() {
           return (
-            <main className='products-page'>
+            <main className='single-page'>
                 <article>
                     <h1 className='product-header'>{this.state.productInfo.name}</h1>
 

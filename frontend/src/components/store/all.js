@@ -30,7 +30,9 @@ export default class All extends Component {
         return (
 
             <main className='products-page'>
-                {this.listProducts()}      
+                <div className='products-list'>
+                    {this.listProducts()}   
+                </div>
             </main>   
  
         );

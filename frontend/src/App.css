@@ -10,6 +10,8 @@ body {
     margin: 0;
     font-family: 'Hind Madurai', sans-serif;
     color: white;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -536,15 +538,47 @@ article > h3 {
 }
 
 @media (min-width: 1224px) {
-    .products-page {
-        margin-top: 40px;
+    .products-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        flex-wrap: wrap;
+
+        margin-top: 40px;    
+        width: 90vw;    
+    }
+
+    article {
+        width: 550px;
+        height: 550px;
+        margin-bottom: 75px;
     }
 }
 
 /* Single Page Adjustments */
 
+.single-page {
+    margin-top: 40px;
+    padding-top: 0px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100%;  
+}
 .add-button {
     font-size: 25px;
+}
+
+
+@media (min-width: 1224px) {
+    .single-page > article {
+        width: 80vw;
+        height: 1000px;
+        margin-bottom: 75px;
+    }
 }
 
 /* Cart Page */
@@ -594,6 +628,21 @@ article > h3 {
     font-size: 40px; 
 }
 
+
+/* Checkout Page */
+.checkout-form {
+    display: flex;
+}
+
+.checkout-button {
+    align-self: center;
+    width: 300px;
+    font-size: 30px;
+}
+
+.form-row {
+    font-size: 100px;
+}
 
 /*
 Monsterrat
