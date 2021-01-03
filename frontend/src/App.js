@@ -2,22 +2,22 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 /* General Components */
-import Navbar from './components/general/navbar.js';
-import Promotion from './components/general/promotion.js';
-import Company from './components/general/company.js';
-import Applications from './components/general/applications.js';
-import Network from './components/general/network.js';
-import Technology from './components/general/technology.js';
-import Contact from './components/general/contact.js';
+import Navbar from './components/general/Navbar.js';
+import Promotion from './components/general/Promotion.js';
+import Company from './components/general/Company.js';
+import Applications from './components/general/Applications.js';
+import Network from './components/general/Network.js';
+import Technology from './components/general/Technology.js';
+import Contact from './components/general/Contact.js';
 
 /* Store Components */
 
-import All from './components/store/all.js';
-import Single from './components/store/single.js';
-import Cart from './components/store/cart.js';
-import Checkout from './components/store/checkout.js';
-import Buttons from './components/store/buttons.js';
-import Category from './components/store/category.js'
+import All from './components/store/All.js';
+import Single from './components/store/Single.js';
+import Cart from './components/store/Cart.js';
+import Checkout from './components/store/Checkout.js';
+import Buttons from './components/store/Buttons.js';
+import Category from './components/store/Category.js'
 
 /* Admin Components */
 import Add from './components/admin/add.js';
@@ -39,6 +39,8 @@ const websiteRouter = () => (
       <Route path='/store/single' component={Single} />
       <Route path='/store/cart' exact component={Cart} />
       <Route path='/store/checkout' exact component={Checkout} />
+
+      
   </div>
 );
 
@@ -50,7 +52,6 @@ const adminRouter = () => (
     </Switch>
   </div>
 );
-
 
 function App() {
   return (

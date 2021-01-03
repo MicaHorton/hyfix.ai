@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Card from './card.js';
+import Card from './Card.js';
 
 export default class Category extends Component {
 

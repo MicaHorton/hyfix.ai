@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
-import Filter from './filter.js';
+import Filter from './Filter.js';
 
 export default class Buttons extends Component {
     constructor (props) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import axios from 'axios';
-import Card from './card.js';
+import Card from './Card.js';
 
 export default class All extends Component {
     constructor (props) {

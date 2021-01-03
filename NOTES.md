@@ -147,3 +147,23 @@ Video, No Code Tutorial
 - Boards (3-5)
 - INS Systems (3-5)
 - Survey Systems (3-5)
+
+## Cart Information
+
+- amazon does use cookies when not logged in
+- but if logged in, will remember cart even if cleared
+- actually appears to store sesion id in cookies. fuck I DON"T KNOW
+
+- client side methods
+  - cookies
+  - localstorage
+  - session storage
+
+- server side methods
+  - session storage
+  
+## Refactoring
+
+- move to api
+- also change component names to double capital
+- change all names to product instead of sometimes product sometimes item
