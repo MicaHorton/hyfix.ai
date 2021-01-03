@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { withCookies } from 'react-cookie';
+import { getSingleProduct } from '../../api';
 
 class Single extends Component {
     constructor(props) {
@@ -27,16 +27,9 @@ class Single extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://api.hyfix.ai/products/single/'
-                  + this.state.productId)
-            .then(response => {
-                console.log('Single product data fetched')
-                this.setState({ productInfo: response.data });
-            })
-            .catch((error) => {
-                console.log(error);
-             })
-
+        getSingleProduct(this.state.productId)
+        .then(product => this.setState({ productInfo: product }))
+        .catch(err => console.log(err))
     }
     
     render() {

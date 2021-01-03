@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
-import axios from 'axios';
 import Card from './Card.js';
+import { getAllProducts } from '../../api.js';
 
 export default class All extends Component {
     constructor (props) {
@@ -11,13 +11,9 @@ export default class All extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://api.hyfix.ai/products') 
-            .then(response => {
-                this.setState({ products: response.data });
-            })
-            .catch((error) => {
-                console.log(error);
-             })
+        getAllProducts()
+        .then(products => this.setState({ products: products }))
+        .catch(err => console.log(err))
     }
 
     listProducts() {

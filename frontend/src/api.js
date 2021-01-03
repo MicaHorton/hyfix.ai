@@ -1,13 +1,47 @@
 import axios from 'axios';
 
-const getPublicStripeKey = options => {
-  return axios.get('http://localhost:5000/payment/public-key')
-  .then(res => {return res})
-  .catch(err => {return err})
-};
+const base = 'http://localhost:5000/';
 
-const getProductsInCart = productList => {
-  return axios.get('http://localhost:5000/products/cart', {
+/* Products */
+export const getAllProducts = () => {
+  return axios.get(base + 'products/all') 
+  .then(res => {
+      return res.data;
+  })
+  .catch((err) => {
+      return err
+   })
+  
+}
+
+export const getProductsByCategory = category => {
+  console.log('get by cat called');
+  console.log(category);
+
+  return axios.get(base + 'products/category/' + category) 
+  .then(res => {
+      console.log('category res', res);
+      return res.data;
+  })
+  .catch((err) => {
+      return err
+   })
+}
+
+export const getSingleProduct = productId => {
+
+  return axios.get(base + 'products/single/' + productId) 
+  .then(res => {
+      return res.data;
+  })
+  .catch((err) => {
+      return err
+   })
+  
+}
+
+export const getProductsInCart = productList => {
+  return axios.get(base + 'products/cart', {
     params: { 
       products: productList 
     }
@@ -21,8 +55,15 @@ const getProductsInCart = productList => {
 
 };
 
-const createPaymentIntent = products => {
-  return axios.post('http://localhost:5000/payment/create-payment-intent', {
+/* Payment */
+export const getPublicStripeKey = () => {
+  return axios.get(base + 'payment/public-key')
+  .then(res => {return res})
+  .catch(err => {return err})
+};
+
+export const createPaymentIntent = products => {
+  return axios.post(base + 'payment/create-payment-intent', {
     products: products
   })
   .then(res => {
@@ -35,11 +76,5 @@ const createPaymentIntent = products => {
 
 };
   
-const api = {
-  createPaymentIntent: createPaymentIntent,
-  getPublicStripeKey: getPublicStripeKey,
-  getProductsInCart: getProductsInCart
-};
-  
-export default api;
+
   

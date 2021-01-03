@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withCookies } from 'react-cookie';
-import axios from 'axios';
-import lodash from 'lodash';
+import { getProductsInCart } from '../../api';
+
 
 const Item = props => (
     <article className='cart-item'>
@@ -59,24 +59,10 @@ class Cart extends Component {
     fetchItems = () => {
         console.log('fetch items');
 
-        let itemsToGet = this.state.itemsToGet;
-        let item;
+        getProductsInCart(this.state.itemsToGet)
+        .then(products => this.setState({ fetchedItems: products }))
+        .catch(err => console.log(err))
 
-        for (item of itemsToGet) {
-            axios.get('https://api.hyfix.ai/products/single/' + item)
-            .then(response => {
-                this.setState((prevState, props) => {
-                    let fetchedItems =  prevState.fetchedItems;
-                    fetchedItems.push(response.data);
-                    return {  fetchedItems: fetchedItems  };
-                });
-
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        }; 
-        
     }
 
 

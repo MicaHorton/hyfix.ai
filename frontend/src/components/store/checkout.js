@@ -8,7 +8,7 @@ import {
   useElements,
   useStripe
 } from '@stripe/react-stripe-js';
-import api from '../../api';
+import { getProductsInCart, createPaymentIntent} from '../../api';
 
 
 // Custom styling can be passed to options when creating an Element.
@@ -44,9 +44,9 @@ const CheckoutForm = () => {
 
   useEffect(() => {
     const productList = cookies.userCart;
-    api.getProductsInCart(productList).then((products) => { 
-
-      api.createPaymentIntent(products)
+    getProductsInCart(productList).then((products) => { 
+      
+      createPaymentIntent(products)
       .then((clientSecret) => {
         console.log('Payment intent success!')
         setClientSecret(clientSecret);
@@ -92,19 +92,6 @@ const CheckoutForm = () => {
       setMetadata(payload.paymentIntent);
       console.log("[PaymentIntent]", payload.paymentIntent);
     }
-
-    /*
-
-    const card = elements.getElement(CardElement);
-    const result = await stripe.createToken(card);
-
-    if (result.error) {
-      setError(result.error.message);
-    } else {
-      setError(null);
-      // Send the token to your server.
-      stripeTokenHandler(result.token);
-    }*/
 
   };
 
