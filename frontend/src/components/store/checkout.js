@@ -96,23 +96,50 @@ const CheckoutForm = () => {
   };
 
   return (
-    <form className='checkout-form' onSubmit={handleSubmit}>
+    <main className='checkout-page'>
+      <form className='checkout-form' onSubmit={handleSubmit}>
 
-      <div className='form-row'>
-        <label htmlFor='card-element'>
-          Credit or debit card
-        </label>
-        <CardElement
-          id='card-element'
-          options={CARD_ELEMENT_OPTIONS}
-          onChange={handleChange}
-        />
-        <div className='card-errors' role='alert'>{error}</div>
-      </div>
+          <div className='form-section'>
+            <h2>Shipping</h2>
 
-      <button className='button checkout-button' type='submit'>Submit Payment</button>
+            <label>Recipient Name</label>
+            <input />
 
-    </form>
+            <label>Street Adress</label>
+            <input />
+
+            <label>City</label>
+            <input />
+
+            <div className='double-input'>
+              <label>State</label>
+              <input />
+
+              <label>Zip Code</label>
+              <input />
+            </div>
+            
+
+            <label>Country</label>
+            <input />
+
+          </div>
+
+          <div className='form-section'>
+            <h2>Payment</h2>
+            <label htmlFor='card-element'>Credit or Debit Card</label>
+            <CardElement 
+              id='card-element' 
+              options={CARD_ELEMENT_OPTIONS} 
+              onChange={handleChange}/>
+            <div className='card-errors' role='alert'>{error}</div>
+          </div>
+
+          <button className='button checkout-button' type='submit'>Submit Payment</button>
+
+      </form>
+    </main>
+    
   );
 }
 

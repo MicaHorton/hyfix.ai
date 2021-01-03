@@ -167,3 +167,8 @@ Video, No Code Tutorial
 - move to api
 - also change component names to double capital
 - change all names to product instead of sometimes product sometimes item
+
+if i were to redo this:
+
+- use antdesign
+- also use stripe as backend maybe

@@ -37,6 +37,12 @@ a {
     text-decoration: none;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 /* Navigation Bar */
 main {
     padding-top: 170px;
@@ -630,14 +636,57 @@ article > h3 {
 
 
 /* Checkout Page */
+
+.checkout-page {
+    margin-top:0 ;
+    padding-top: 0;
+}
+
 .checkout-form {
+    width: 80vw;
     display: flex;
+    flex-direction: column;
+    
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.form-section.h2 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+
+label {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+input {
+    height: 30px;
+    margin-left: 0px;
+    font-size: 20px;
+}
+
+.double-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.double-input > input {
+    margin-left: 20px;
 }
 
 .checkout-button {
     align-self: center;
     width: 300px;
     font-size: 30px;
+    margin-top: 30px;
 }
 
 .form-row {
