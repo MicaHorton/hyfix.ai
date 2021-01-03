@@ -26,6 +26,7 @@ const createPaymentIntent = products => {
     products: products
   })
   .then(res => {
+    console.log('payment intent', res);
     return res.data.client_secret
   })
   .catch((err) => {

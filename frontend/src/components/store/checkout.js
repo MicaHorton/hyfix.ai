@@ -129,20 +129,6 @@ const CheckoutForm = () => {
   );
 }
 
-// POST the token ID to your backend.
-/*
-async function stripeTokenHandler(token) {
-  const response = await fetch('/charge', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({token: token.id})
-  });
-
-  return response.json();
-}*/
-
 const stripePromise = loadStripe('pk_test_51I0CsSIzd0xoN2NEasujFfk8OIEYrwO5KrdT4fYAjUiQ8iJVP1fumZ3XGDf1XJq0Q3C9I0wlsQxbtYY2xRAvP2eZ0024wl5yqd');
 const CheckoutPage = () => {
   return (
@@ -152,7 +138,7 @@ const CheckoutPage = () => {
   );
 }
 
-
 export default CheckoutPage; 
 
 
+/* 4242 4242 4242 4242 */
