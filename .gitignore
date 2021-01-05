@@ -3,6 +3,7 @@
 # error fix?
 # /frontend/src/aws-exports.js
 
+/node-modules
 # dependencies
 /frontend/node_modules
 /backend/node_modules
