@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styles from '../../App.css';
 import logo from '../../media/full_logo.png';
 import 'font-awesome/css/font-awesome.min.css';
 

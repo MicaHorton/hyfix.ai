@@ -24,7 +24,8 @@ export default class About extends Component {
         </div>
 
         <div className='page-item-2'>
-          <iframe src='https://docs.google.com/forms/d/e/1FAIpQLScDjQ5MfYBdhCLlm5o4Axd6HpqVfNAkZWQquKbI2B9I0WLBlA/viewform?embedded=true' width='100%' height='1000' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' >Loading…</iframe>      
+          <iframe src='https://docs.google.com/forms/d/e/1FAIpQLScDjQ5MfYBdhCLlm5o4Axd6HpqVfNAkZWQquKbI2B9I0WLBlA/viewform?embedded=true' 
+          title='Contact Information Form' width='100%' height='1000' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' >Loading…</iframe>      
         </div>
              
       </main>
