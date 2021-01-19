@@ -46,7 +46,7 @@ main {
 }
 
 
-@media (min-width: 1224px) {
+@media (min-width: 1000px) {
     .logo-web {
         display: block;
     }
@@ -256,7 +256,7 @@ iframe {
     margin-top: 80px;   
 }
 
-@media (min-width: 1224px) {
+@media (min-width: 1000px) {
     .contact-page {
         width: 50vw;
 
