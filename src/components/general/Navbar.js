@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../media/full_logo.png';
+import full_logo from '../../media/full_logo.png';
+import icon_only from '../../media/icon_only.png';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class Navbar extends Component {
@@ -23,7 +24,8 @@ export default class Navbar extends Component {
               <header>
                 <button className='fa fa-bars' onClick={() => this.toggleOverlay()}></button>
                 <Link to='/' className='logo' onClick={() => this.toggleOverlay()}>
-                  <img className='logo-image' src={logo} alt='logo'/>
+                  <img className='logo-mobile' src={full_logo} alt='logo'/>
+                  <img className='logo-web' src={icon_only} alt='logo'/>
                 </Link>
               </header>
 

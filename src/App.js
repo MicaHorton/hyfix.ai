@@ -12,12 +12,16 @@ import Technology from './components/general/Technology.js';
 import Contact from './components/general/Contact.js';
 
 /* Store Components */
-import All from './components/store/All.js';
-import Single from './components/store/Single.js';
-import Cart from './components/store/Cart.js';
-import Checkout from './components/store/Checkout.js';
-import Buttons from './components/store/Buttons.js';
-import Category from './components/store/Category.js'
+import StoreNav from './components/store/navigation/StoreNav.js';
+
+import All from './components/store/products/All.js';
+import Single from './components/store/products/Single.js';
+import Category from './components/store/products/Category.js'
+
+import Cart from './components/store/purchase/Cart.js';
+import Checkout from './components/store/purchase/Checkout.js';
+
+
 
 /* Admin Components */
 import Add from './components/admin/add.js';
@@ -33,14 +37,13 @@ const websiteRouter = () => (
       <Route path='/technology' exact component={Technology} />
       <Route path='/contact' exact component={Contact} />
 
-      <Route path='/store' component={Buttons} />
+      <Route path='/store' component={StoreNav} />
       <Route path='/store/all' component={All} />
       <Route path='/store/category' component={Category} />
       <Route path='/store/single' component={Single} />
       <Route path='/store/cart' exact component={Cart} />
       <Route path='/store/checkout' exact component={Checkout} />
 
-      
   </div>
 );
 

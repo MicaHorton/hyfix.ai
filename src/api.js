@@ -30,7 +30,6 @@ export const getProductsByCategory = category => {
 }
 
 export const getSingleProduct = productId => {
-
   return axios.get(base + 'products/single/' + productId) 
   .then(res => {
       return res.data;

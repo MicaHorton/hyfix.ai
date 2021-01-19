@@ -52,6 +52,9 @@ Subdomain vs Subdirectory
 Lifting State Up
 <https://reactjs.org/docs/lifting-state-up.html>
 
+Named vs Default Export
+<https://blogreact.com/named-export-vs-default-export/>
+
 ## Payment Modules
 
 POWR
@@ -111,22 +114,6 @@ Deploy Express API with Claudia
 Claudia Docs
 <https://www.claudiajs.com/documentation.html>
 
-## Subdomains
-
-1) create the a new hosted zone with the name of the subdomain
-then create a simple record that routes the subdomain to the nameservers
-of the new hosted zone
-2) then go into custom domain section of API gateway and add one
-3) then create an A Alias record that points to the gateway
-
-Creating Subdomains
-<https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-routing-traffic-for-subdomains.html#dns-routing-traffic-for-subdomains-creating-hosted-zone>
-
-Connecting Subdomain to API
-<https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html>
-
-- hostname portion of the URL (that is, api-id.execute-api.region.amazonaws.com) refers to an API endpoint.
-
 ## Images
 
 <https://codedec.com/tutorials/image-uploading-to-mongodb-in-nodejs/>
@@ -172,3 +159,8 @@ if i were to redo this:
 
 - use antdesign
 - also use stripe as backend maybe
+
+## Inspiration
+
+<https://mall.qxwz.com/market/skzn?items=%3B0qdjjrrg6yj%3A0RflnGmbJu0%2C0RflnPwKh1e%3B0qdjjrrg6yh%3A0RflmE8AlX2>
+
