@@ -343,22 +343,6 @@ input {
     display: none;
 }
 
-@media (min-width: 1224px) {
-
-    .store-bar {
-        display: block;
-    }
-
-    .products-list {
-        padding-top: 200px;
-    }
-
-    nav.store-buttons {
-        display: none;
-    } 
-}
-
-
 /* Store Buttons */
 .store-buttons {
     display: flex;
@@ -496,28 +480,9 @@ article > h3 {
     background-color: blue;
 }
 
-@media (min-width: 1224px) {
-    .products-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        
-        flex-wrap: wrap;
-
-        margin-top: 40px;    
-        width: 90vw;    
-    }
-
-    article {
-        width: 550px;
-        height: 550px;
-        margin-bottom: 75px;
-    }
-}
 
 /* Single Page Adjustments */
 .single-page {
-    margin-top: 40px;
     padding-top: 0px;
     position: static;
     display: flex;
@@ -644,13 +609,13 @@ input {
     main {
         padding-top: 70px;
     }
-
     nav {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 70px;
+        top: 0;
     }
 
     header {
@@ -716,9 +681,11 @@ input {
 
     }
 
-    
-
     /* Store Navigation */
+    nav.store-buttons {
+        display: none;
+    } 
+
     .store-bar {
         color: white;
         width: 100vw;
@@ -744,6 +711,28 @@ input {
     .store-bar > *:hover {
         color: #7b7a80; 
     }
+
+    .products-page, .single-page, .checkout-page  {
+        padding-top: 180px;
+       
+    }
+
+    /* Products Page */
+    .products-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 90vw;    
+    }
+
+    article {
+        width: 550px;
+        height: 550px;
+        margin-bottom: 75px;
+    }
+
+    
 
     /* Technology Page */
     .page-container {
