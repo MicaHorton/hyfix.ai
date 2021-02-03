@@ -11,18 +11,25 @@ class Single extends Component {
      }
 
     addToCart() {
-        const cookies = this.props.cookies;
-        let itemsInCart = cookies.get('userCart');
+        const cookies = this.props.cookies
+        const userCart = cookies.get('userCart');
+
+        let itemsInCart;
+        if (userCart !== 'undefined') {
+            itemsInCart = userCart;
+        } else {
+            itemsInCart = false;
+        }
 
         if (itemsInCart) {
             itemsInCart.push(this.state.productId);
             cookies.set('userCart', itemsInCart , {path: '/'});
-
         } else {
-            console.log('no cookies exist yet')
+            console.log('No cookies exist yet')
             cookies.set('userCart', [this.state.productId], {path: '/'})
         }
-        console.log('Current Items', cookies.get('userCart'));
+
+        console.log(this.props.history.push('/store/all'));
     }
 
     componentDidMount() {
@@ -34,15 +41,16 @@ class Single extends Component {
     render() {
           return (
             <main className='single-page'>
-                <article>
+                <article className='single-article'>
                     <h1 className='product-header'>{this.state.productInfo.name}</h1>
 
-                    <div className='fake-image'></div>
+                    <img className='single-image' 
+                    src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${this.state.productInfo.img}`}></img>
+
                     <h2>price: $ {this.state.productInfo.price}</h2>
                     <h3>{this.state.productInfo.description}</h3>
-                    <button className='button add-button' onClick={() => this.addToCart()}>Add To Cart</button>
-
                 </article>
+                <button className='button add-button' onClick={() => this.addToCart()}>Add To Cart</button>
             </main>
      
         );

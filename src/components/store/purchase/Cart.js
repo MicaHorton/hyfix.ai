@@ -6,7 +6,8 @@ import { getProductsInCart } from '../../../api';
 
 const Item = props => (
     <article className='cart-item'>
-        <div className='fake-image'></div>
+        <img className='cart-image'
+         src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.item.img}`}></img>
         <h1>{props.item.name}</h1>
         <h2>$ {props.item.price}</h2>
     </article>
@@ -23,8 +24,13 @@ class Cart extends Component {
     }
 
     static getDerivedStateFromProps(props, state) {
-        let cookies = props.cookies;
-        let itemsInCart = cookies.get('userCart');
+        let cookies = props.cookies.get('userCart');
+        let itemsInCart;
+        if (cookies !== 'undefined') {
+            itemsInCart = cookies;
+        } else {
+            itemsInCart = false;
+        }
 
         if (itemsInCart) {
             if (state.itemsToGet.toString() !== itemsInCart.toString()) {
@@ -50,19 +56,15 @@ class Cart extends Component {
         } 
         
         if (this.state.fetchedItems) {
-            console.log('therea re fetched');
             console.log(this.state.fetchedItems);
             this.renderItems()
         }
     }
 
     fetchItems = () => {
-        console.log('fetch items');
-
         getProductsInCart(this.state.itemsToGet)
         .then(products => this.setState({ fetchedItems: products }))
         .catch(err => console.log(err))
-
     }
 
 

@@ -20,8 +20,7 @@ import Category from './components/store/products/Category.js'
 
 import Cart from './components/store/purchase/Cart.js';
 import Checkout from './components/store/purchase/Checkout.js';
-
-
+import Sucess from './components/store/purchase/Success.js';
 
 /* Admin Components */
 import Add from './components/admin/add.js';
@@ -43,7 +42,7 @@ const websiteRouter = () => (
       <Route path='/store/single' component={Single} />
       <Route path='/store/cart' exact component={Cart} />
       <Route path='/store/checkout' exact component={Checkout} />
-
+      <Route path='/store/success' exact component={Sucess}></Route>
   </div>
 );
 

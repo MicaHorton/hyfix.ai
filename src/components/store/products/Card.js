@@ -6,9 +6,9 @@ const Card = props => (
         <Link to={{pathname: '/store/single/', hash: props.item._id}} 
               className='product-header'>{props.item.name}</Link>
 
-        <div className='fake-image'></div>
+        <img className='product-image' src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.item.img}`}></img>
         <h2>price: ${props.item.price}</h2>
-        <h3>{props.item.description}</h3>
+        <h3>{props.item.synopsis}</h3>
         
     </article>
 )

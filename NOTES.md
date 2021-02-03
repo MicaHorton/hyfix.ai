@@ -4,9 +4,17 @@
 
 ## To-Do For Today
 
-- Refactor code
-- Finish categories
-- Polish frontend? or start images
+
++ Fix checkout form on mobile
++ Fix navbar on mobile
+- Fix checkout form on desktop
+
++ Add images from example material
++ Add example descriptions
+- Add metadata to requests
+
+- Fix checkout button
+- Fix multiple only working on localhost error
 
 ## Unsolved Bugs
 

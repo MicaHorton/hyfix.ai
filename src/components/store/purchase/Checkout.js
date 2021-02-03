@@ -9,8 +9,8 @@ import {
     useStripe
 } from '@stripe/react-stripe-js';
 import { getProductsInCart, createPaymentIntent} from '../../../api';
+import { useHistory } from 'react-router';
 
-// Custom styling can be passed to options when creating an Element.
 const CARD_ELEMENT_OPTIONS = {
     style: {
         base: {
@@ -32,14 +32,22 @@ const CARD_ELEMENT_OPTIONS = {
 const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
+    const history = useHistory();
 
     const [error, setError] = useState(null);
     const [clientSecret, setClientSecret] = useState(null);
-    const [cookies] = useCookies();
+    const [cookies, removeCookie] = useCookies();
 
     const [metadata, setMetadata] = useState(null);
     const [succeeded, setSucceeded] = useState(false);
     const [processing, setProcessing] = useState(false);
+
+    const [recipient, setRecipient] = useState(null);
+    const [street, setStreet] = useState(null);
+    const [city, setCity] = useState(null);
+    const [theState, setTheState] = useState(null);
+    const [code, setCode] = useState(null);
+    const [country, setCountry] = useState(null);
 
     useEffect(() => {
         const productList = cookies.userCart;
@@ -58,7 +66,7 @@ const CheckoutForm = () => {
 
     }, []); //keeps hook to only once, intresting?
 
-    const handleChange = (ev) => {
+    const handlePaymentChange = (ev) => {
         if (ev.error) {
             setError(ev.error.message);
         } else {
@@ -69,27 +77,39 @@ const CheckoutForm = () => {
     const handleSubmit = async (ev) => {
         ev.preventDefault();
         setProcessing(true);
-        
 
         const payload = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: elements.getElement(CardElement),
                 billing_details: {
                     name: ev.target.name.value,
-                },
+                }
             },
+            shipping: {
+                name: recipient,
+                address: {
+                    line1: street, 
+                    city: city,
+                    state: theState,
+                    country: country,
+                    postal_code: code
+                }
+            }
         });
 
+    
         if (payload.error) {
             setError(`Payment failed: ${payload.error.message}`);
             setProcessing(false);
             console.log("[error]", payload.error);
         } else {
-            setError(null);
+            setError(null); 
             setSucceeded(true);
             setProcessing(false);
             setMetadata(payload.paymentIntent);
-            console.log("[PaymentIntent]", payload.paymentIntent);
+            history.push({ pathname: '/store/success'});
+            removeCookie('userCart', { path: '/'});
+            console.log("[PaymentIntent]", payload.paymentIntent)
         }
 
     };
@@ -101,25 +121,25 @@ const CheckoutForm = () => {
                     <h2>Shipping</h2>
 
                     <label>Recipient Name</label>
-                    <input />
+                    <input value={recipient} onChange={e => setRecipient(e.target.value)}/>
 
-                    <label>Street Adress</label>
-                    <input />
+                    <label>Street Address</label>
+                    <input value={street} onChange={e => setStreet(e.target.value)} />
 
                     <label>City</label>
-                    <input />
+                    <input value={city} onChange={e => setCity(e.target.value)} />
 
                     <div className='double-input'>
                         <label>State</label>
-                        <input />
+                        <input value={theState} onChange={e => setTheState(e.target.value)} />
 
-                        <label>Zip Code</label>
-                        <input />
+                        <label>Zip/Postal Code</label>
+                        <input value={code} onChange={e => setCode(e.target.value)} />
                     </div>
                     
 
                     <label>Country</label>
-                    <input />
+                    <input value={country} onChange={e => setCountry(e.target.value)} />
                 </div>
 
                 <div className='form-section'>
@@ -128,7 +148,7 @@ const CheckoutForm = () => {
                     <CardElement 
                         id='card-element' 
                         options={CARD_ELEMENT_OPTIONS} 
-                        onChange={handleChange}/>
+                        onChange={handlePaymentChange}/>
                     <div className='card-errors' role='alert'>{error}</div>
                 </div>
 
@@ -136,7 +156,6 @@ const CheckoutForm = () => {
 
             </form>
         </main>
-                
         );
 }
 
