@@ -6,7 +6,7 @@ import { getProductsInCart } from '../../../api';
 
 const Item = props => (
     <article className='cart-item'>
-        <img className='cart-image'
+        <img className='cart-image' alt={props.item.img}
          src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.item.img}`}></img>
         <h1>{props.item.name}</h1>
         <h2>$ {props.item.price}</h2>

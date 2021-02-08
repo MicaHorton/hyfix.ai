@@ -38,9 +38,9 @@ const CheckoutForm = () => {
     const [clientSecret, setClientSecret] = useState(null);
     const [cookies, removeCookie] = useCookies();
 
-    const [metadata, setMetadata] = useState(null);
-    const [succeeded, setSucceeded] = useState(false);
-    const [processing, setProcessing] = useState(false);
+    const [setMetadata] = useState(null); // [metadata, setMetadata]
+    const [setSucceeded] = useState(false); // [succeeded, setSucceeded] 
+    const [setProcessing] = useState(false); // [processing, setProcessing]
 
     const [recipient, setRecipient] = useState(null);
     const [street, setStreet] = useState(null);
@@ -64,7 +64,7 @@ const CheckoutForm = () => {
         
         });
 
-    }, []); //keeps hook to only once, intresting?
+    }, [cookies.userCart]); //keeps hook to only once, intresting?
 
     const handlePaymentChange = (ev) => {
         if (ev.error) {

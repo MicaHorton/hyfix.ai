@@ -44,7 +44,7 @@ class Single extends Component {
                 <article className='single-article'>
                     <h1 className='product-header'>{this.state.productInfo.name}</h1>
 
-                    <img className='single-image' 
+                    <img alt={this.state.productInfo.img} className='single-image' 
                     src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${this.state.productInfo.img}`}></img>
 
                     <h2>price: $ {this.state.productInfo.price}</h2>
