@@ -5,6 +5,7 @@ This is a full-stack MERN website I built for HYFIX, the company I intern for. I
 ### Frontend
 - HTML
 - CSS
+- JavaScript
 - React framework
 - AWS Amplify
 ### Backend
