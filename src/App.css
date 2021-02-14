@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-/* CSS Reset */
+/* 1) RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -73,7 +73,7 @@ html, body {
     background-color:#202020;  
 }
 
-/* General Settings */
+/* 2) GENERAL */
 body {
     padding: 0;
     margin: 0;
@@ -110,6 +110,7 @@ a {
     text-decoration: none;
 }
 
+/* 3) PAGES */
 /* Navigation Bar */
 main {
     padding-top: 170px;
@@ -400,6 +401,7 @@ input {
     margin-left: 0;
 }
 
+/* 4) STORE */
 /* Store Bar */
 .store-bar {
     display: none;
@@ -531,7 +533,6 @@ article > h2 {
     font-size: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 
 article > h3 {
@@ -541,10 +542,26 @@ article > h3 {
 
 }
 
-.product-image, .single-image {
+.product-image-link, .single-image {
     width: 90%;
     height: 40%;
     object-fit: contain;
+
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.read-more {
+    font-style: italic;
+    align-self: flex-end;
+    margin-top: 50px;
+    margin-right: 50px;
+    font-size: 25px;
+
 }
 
 /* Single Page Adjustments */
@@ -681,6 +698,7 @@ input {
     font-size: 100px;
 }
 
+/* 5) DESKTOP */
 @media (min-width: 1224px) {
 
     /* Navigation Bar */
@@ -819,17 +837,27 @@ input {
         margin-bottom: 75px;
     }
 
+    .product-header {
+        margin-bottom: 0px;
+    }
+
     .product-image {
         height: 200px;
     }
 
     article h2 {
+        margin-top: 0px;
         margin-bottom: 10px;
     }
+
     article h2, article h3 {
         font-size: 20px;
     }
 
+    .read-more {
+        margin-top: 15px;
+        font-size: inherit;
+    }
 
     /* Technology Page */
     .page-container {

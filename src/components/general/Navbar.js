@@ -23,7 +23,7 @@ export default class Navbar extends Component {
 
               <header>
                 <button className='fa fa-bars' onClick={() => this.toggleOverlay()}></button>
-                <Link to='/' className='logo' onClick={() => this.toggleOverlay()}>
+                <Link to='/store/all' className='logo' onClick={() => this.toggleOverlay()}>
                   <img className='logo-mobile' src={full_logo} alt='logo'/>
                   <img className='logo-web' src={icon_only} alt='logo'/>
                 </Link>

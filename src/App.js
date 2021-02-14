@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 
 /* General Components */
@@ -28,8 +28,9 @@ import Add from './components/admin/add.js';
 const websiteRouter = () => (
   <div>
       <Navbar path='/' />
-      <Route path='/' exact component={Company} />
+      <Redirect from='/' to='/store/all'/>
 
+      <Route path='/company' exact component={Company} />
       <Route path='/promotion' exact component={Promotion} />
       <Route path='/applications' exact component={Applications} />
       <Route path='/network' exact component={Network} />
