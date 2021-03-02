@@ -48,7 +48,8 @@ class Single extends Component {
                     src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${this.state.productInfo.img}`}></img>
 
                     <h2>price: $ {this.state.productInfo.price}</h2>
-                    <h3>{this.state.productInfo.description}</h3>
+                    
+
                 </article>
                 <button className='button add-button' onClick={() => this.addToCart()}>Add To Cart</button>
             </main>
@@ -60,7 +61,6 @@ class Single extends Component {
 export default withCookies(Single);
 
 /*
-
-<img src='https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/hello2.jpg' alt='hello'></img>
+<h3>{this.state.productInfo.description}</h3>
 
 */
