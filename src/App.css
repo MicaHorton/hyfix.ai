@@ -1,13 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;700&family=Montserrat:wght@500;600;700&family=Ramabhadra&display=swap');
-<<<<<<< HEAD
-
-html, body {
-    overflow-x: hidden;
-    background-color:#202020;  
-}
-
-body {
-=======
 @import url('https://fonts.googleapis.com/css2?family=Meera+Inimai&family=Varela&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Varela&family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&family=Roboto+Condensed:wght@400;700&family=Varela&family=Varela+Round&display=swap');
@@ -84,156 +75,10 @@ html, body {
 
 /* 2) GENERAL */
 body {
->>>>>>> dev
     padding: 0;
     margin: 0;
     font-family: 'Hind Madurai', sans-serif;
     color: white;
-<<<<<<< HEAD
-}
-
-/* Navigation Bar */
-main {
-    padding-top: 170px;
-}
-
-nav {
-    position: fixed;
-    z-index: 1;
-}
-header {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-
-    height: 170px;
-    background-color: rgb(34,40,46, 0.8);
-    width: 100vw;
-}
-
-button.fa {
-    
-    border: none;
-    color: white;
-    font-size: 80px;
-    padding-left: 40px;
-    /* Also, not sure if this is the ideal solution to center the logo. */
-    position: absolute; 
-}
-
-.logo {
-    margin: 0 auto;
-}
-
-.logo-image {
-    height: 120px;
-    padding-left: 20px;
-}
-
-.logo-web {
-    display: none;
-}
-
-.logo-web {
-    display: none;
-}
-
-
-@media (min-width: 1224px) {
-    .logo-web {
-        display: block;
-    }
-
-    .logo-mobile {
-        display: none;
-    }
-    
-}
-
-.menu {
-    display: none;
-    align-items: center;
-    
-}
-
-div.menu-overlay {
-    display: flex;
-    flex-direction: column;
-
-    width: 100vw;
-    height: 100vh;
-    padding-top: 170px;
-
-    background-color: rgb(34,40,46, 0.8);
-    position: relative;
-    z-index: 1;
-    
-}
-
-.menu-item {
-    font-size: 100px;
-    color: white;
-    margin-top: 20px;
-}
-
-@media (min-width: 1224px) {
-
-    main {
-        padding-top: 100px;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: right;
-        align-items: center;
-        background-color: rgb(34,40,46, 0.8);
-        height: 100px;
-    }
-
-    header {
-        height: inherit;
-    }
-
-    button.fa {
-        display: none;
-    }
-
-    .logo {
-        margin: inherit;
-    }
-    .logo-image {
-        height: 80px;
-    }
-
-    div.menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-
-        height: inherit;
-        padding-top: 0px;
-        background-color: rgb(34,40,46, 0.8);
-        position: fixed;
-        width: inherit;
-    }
- 
-    .menu-item {
-        font-size: 25px;
-        margin-top: 0;
-        padding-right: 60px;
-        font-family: inherit;
-        color: inherit;
-        text-decoration: none;
-        text-transform: uppercase;
-        opacity: 1;
-    }
-
-}
-
-/* Normal-Page Banner */
-
-=======
     display: flex;
     justify-content: center;
 
@@ -332,7 +177,6 @@ div.menu-overlay {
 }
 
 /* Normal-Page Banner */
->>>>>>> dev
 .banner {
     display: flex;
     flex-direction: column;
@@ -399,147 +243,6 @@ p.section-text {
 }
 
 /* Promotion Page */
-<<<<<<< HEAD
-
-.page-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 200px 50px 0 50px;
-    background-color: #4e5154;
-}
-
-
-/* Page Item 1 (Left) */
-.page-item-1 {
-    flex-basis: 55%;
-    text-align: center;
-    flex-grow: 1;
-    height: 700px;
-}
-
-.page-item-1 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-
-    font-size: 64px;
-    text-align: left;
-    margin-top: 10px;
-    
-}
-
-.page-item-1 p {
-    font-size: 25px;
-    text-align: left;
-    margin-left: 20px;
-    margin-top: 0px;
-}
-
-
-.base-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-}
-
-.base-image {
-    flex-basis: 50%;
-    max-width: 400px;
-    object-fit: contain;
-    
-}
-
-.base-caption {
-    flex-basis: 50%;
-}
-
-/* Page Item 2 (Right) */
-.page-item-2 {
-    flex-basis: 45%;
-    text-align: center;
-    flex-grow: 1;
-}
-
-iframe {
-    padding-top: 100px;
-    padding-left: 20px;
-    min-width: 500px;
-}
-
-@media (min-width: 1224px) {
-    
-    .page-container {
-        padding-top: 130px;
-
-    }
-
-    iframe {
-        padding-top: 0px;
-    }
-}
-
-/* Technology Page */
-.banner-text.tech {
-    padding: 100px;
-}
-
-.banner-image.tech {
-    min-height: 400px;
-    object-fit: cover;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 80px;
-}
-
-.list-item {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    padding-top: 80px;
-}
-
-.icon {
-    height: 150px;
-}
-
-.list-text {
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-
-}
-.list-text h3 {
-    font-weight: 400;
-}
-
-/* Contact Page */
-
-.contact-page {
-    display: flex;
-    flex-direction: column;
-    background-color: #202020; /* or #4e5154 */
-    align-items: center;
-    
-}
-
-
-.contact-page iframe {
-    margin-top: 20px;   
-}
-
-@media (min-width: 1224px) {
-
-    .contact-page iframe {
-        margin-top: 80px;   
-    }
- 
-=======
 .page-container {
     display: flex;
     flex-direction: row;
@@ -1191,7 +894,6 @@ input {
         margin-bottom: 60px;
     }
 
->>>>>>> dev
 }
 
 /*
