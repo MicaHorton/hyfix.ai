@@ -20,7 +20,7 @@ export default class Technology extends Component {
               <img className='icon' src={rtk_gnss_icon} alt='icon'/>
               <div className='list-text'>
                 <h2>RTK GNSS</h2>
-                <h3>HYFIX's positioning services provide centimeter level precision for mass market applications.</h3>
+                <h3>HYFIX positioning services provide centimeter level precision for mass market applications.</h3>
               </div>
             </section>
 
