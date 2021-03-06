@@ -25,11 +25,13 @@ import Sucess from './components/store/purchase/Success.js';
 /* Admin Components */
 import Add from './components/admin/add.js';
 
+/* <Redirect from='/' to='/store/all'/> */
+
 const websiteRouter = () => (
   <div>
       <Navbar path='/' />
-      <Redirect from='/' to='/store/all'/>
-
+      
+      <Route path='/' exact component={Company} />
       <Route path='/company' exact component={Company} />
       <Route path='/promotion' exact component={Promotion} />
       <Route path='/applications' exact component={Applications} />
