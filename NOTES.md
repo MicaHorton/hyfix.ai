@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # Solved Bugs
 
@@ -9,7 +8,6 @@
 
 - Should I center the text on web like I did on mobile?
 - Also, maybe I should visually center things by making them a little higher than usual (that should be baked into css protocol)?
-=======
 # Notes
 
 <https://1uzsz611cb.execute-api.us-west-1.amazonaws.com/latest/products>
@@ -184,4 +182,9 @@ if i were to redo this:
 
 <https://mall.qxwz.com/market/skzn?items=%3B0qdjjrrg6yj%3A0RflnGmbJu0%2C0RflnPwKh1e%3B0qdjjrrg6yh%3A0RflmE8AlX2>
 
->>>>>>> dev
+## New Tools To Use
+Admin Panel
+https://blog.logrocket.com/admin-panel-with-react/
+
+Pupetter
+https://pptr.dev/

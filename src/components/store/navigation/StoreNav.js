@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import Filter from './Filter.js';
 import Items from './Items.js';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
 
 export default class StoreNavbar extends Component {
     constructor (props) {
@@ -25,7 +28,7 @@ export default class StoreNavbar extends Component {
             </nav>
 
             <nav className='store-buttons'>
-                <Link to='/store/cart' className='fa fa-shopping-cart'></Link>
+                <Link to='/store/cart' className='fas fa-shopping-cart'></Link>
                 <div className='fa fa-filter' onClick={() => this.toggleFilter()}></div>
                 <Filter showSelf={this.state.showFilter} toggleFilter={this.toggleFilter}/>
             </nav>

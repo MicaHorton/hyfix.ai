@@ -48,6 +48,7 @@ class Single extends Component {
                     src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${this.state.productInfo.img}`}></img>
 
                     <h2>price: $ {this.state.productInfo.price}</h2>
+                    <h3>{this.state.productInfo.description} Hello!</h3>
                     
 
                 </article>
@@ -60,7 +61,3 @@ class Single extends Component {
 
 export default withCookies(Single);
 
-/*
-<h3>{this.state.productInfo.description}</h3>
-
-*/
