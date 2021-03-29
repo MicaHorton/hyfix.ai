@@ -7,6 +7,7 @@ import Items from './Items.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 library.add(fas);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class StoreNavbar extends Component {
     constructor (props) {
@@ -25,6 +26,7 @@ export default class StoreNavbar extends Component {
             <nav className='store-bar'>
                 <Items/>
                 <Link to='/store/cart' className='fa fa-shopping-cart'></Link>
+                <FontAwesomeIcon icon={['fas', 'coffee']}/>
             </nav>
 
             <nav className='store-buttons'>
