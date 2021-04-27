@@ -84,6 +84,11 @@ body {
 
 }
 
+.icon {
+    height: 50px;
+    padding-right: 50px;
+}
+
 .button {
     width: 200px;
     height: 70px;
@@ -345,7 +350,7 @@ iframe {
     padding-top: 80px;
 }
 
-.icon {
+.tech-icon {
     height: 150px;
 }
 
@@ -701,6 +706,9 @@ input {
 /* 5) DESKTOP */
 @media (min-width: 1224px) {
 
+    .icon {
+        height: 25px;
+    }
     /* Navigation Bar */
     main {
         padding-top: 70px;

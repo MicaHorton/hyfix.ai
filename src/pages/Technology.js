@@ -17,7 +17,7 @@ export default class Technology extends Component {
           <div className='list section-dark'>
 
             <section className='list-item'>
-              <img className='icon' src={rtk_gnss_icon} alt='icon'/>
+              <img className='tech-icon' src={rtk_gnss_icon} alt='icon'/>
               <div className='list-text'>
                 <h2>RTK GNSS</h2>
                 <h3>HYFIX positioning services provide centimeter level precision for mass market applications.</h3>
@@ -25,7 +25,7 @@ export default class Technology extends Component {
             </section>
 
             <section className='list-item'>
-              <img className='icon' src={sensor_fusion_icon} alt='icon'/>
+              <img className='tech-icon' src={sensor_fusion_icon} alt='icon'/>
               <div className='list-text'>
                 <h2>Sensor Fusion</h2>
                 <h3>Using sensor fusion of IMU, GNSS and other sensor data, HYFIX algorithms can provide precise positioning in GPS challenged enviroments.</h3>
@@ -34,7 +34,7 @@ export default class Technology extends Component {
             </section>
 
             <section className='list-item'>
-              <img className='icon' src={lora_icon} alt='icon'/>
+              <img className='tech-icon' src={lora_icon} alt='icon'/>
               <div className='list-text'>
                 <h2>LoRa</h2>
                 <h3>LoRaWAN wireless gateway allows any compatible LoRa IoT device to transfer data on PAS network.</h3>
@@ -42,7 +42,7 @@ export default class Technology extends Component {
             </section>
 
             <section className='list-item'>
-              <img className='icon' src={blockchain_icon} alt='icon'/>
+              <img className='tech-icon' src={blockchain_icon} alt='icon'/>
               <div className='list-text'>
                 <h2>Blockchain</h2>
                 <h3>Blockchain powers the network and serves as the underlying technology for PAS cryptocurrency.</h3>

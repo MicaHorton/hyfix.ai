@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import full_logo from '../media/full_logo.png';
 import icon_only from '../media/icon_only.png';
+// import menu_icon from '../media/menu.svg';
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class Navbar extends Component {

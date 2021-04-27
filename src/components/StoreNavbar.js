@@ -1,14 +1,10 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import 'font-awesome/css/font-awesome.min.css';
 import FilterButton from './FilterButton.js';
 import CategoryList from './CategoryList.js';
-
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-library.add(fas);
+import cart_icon from '../media/cart.svg';
+import funnel_icon from '../media/funnel.svg';
 
 export default class StoreNavbar extends Component {
     constructor (props) {
@@ -26,13 +22,17 @@ export default class StoreNavbar extends Component {
             <>
             <nav className='store-bar'>
                 <CategoryList/>
-                <Link to='/store/cart' className='fa fa-shopping-cart'></Link>
-                <FontAwesomeIcon icon={['fas']}/>
+                <Link to='/store/cart'><img src={cart_icon} className='icon' alt='cart icon'/></Link>
+                
             </nav>
 
             <nav className='store-buttons'>
-                <Link to='/store/cart' className='fas fa-shopping-cart'></Link>
-                <div className='fa fa-filter' onClick={() => this.toggleFilter()}></div>
+                <Link to='/store/cart'>
+                    <img src={cart_icon} className='icon' alt='cart icon'/>
+                </Link>
+                <div onClick={() => this.toggleFilter()}>
+                    <img src={funnel_icon} className='icon funnel-icon' alt='funnel icon'/>
+                </div>
                 <FilterButton showSelf={this.state.showFilter} toggleFilter={this.toggleFilter}/>
             </nav>
             </>
@@ -42,18 +42,9 @@ export default class StoreNavbar extends Component {
 }
 
 /*
-<>
-            <nav className='store-bar'>
-                <Items/>
-                <Link to='/store/cart' className='fa fa-shopping-cart'></Link>
-                <FontAwesomeIcon icon={['fas', 'coffee']}/>
-            </nav>
-
-            <nav className='store-buttons'>
-                <Link to='/store/cart' className='fas fa-shopping-cart'></Link>
-                <div className='fa fa-filter' onClick={() => this.toggleFilter()}></div>
-                <Filter showSelf={this.state.showFilter} toggleFilter={this.toggleFilter}/>
-            </nav>
-            </>
-
+<Link  className='fa fa-shopping-cart'></Link>
+                
+import cart_icon from '../media/cart.svg';
+<img src={cart_icon}/>
+<FontAwesomeIcon icon={['fas']}/>
 */
