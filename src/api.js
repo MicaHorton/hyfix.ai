@@ -3,9 +3,9 @@ import axios from 'axios';
 // const base = 'http://localhost:5000/';
 const base = 'https://api.hyfix.ai/';
 
-/* Products */
+// Products
 export const getAllProducts = () => {
-    return axios.get(base + 'products/all') 
+    return axios.get(base + 'products/') 
     .then(res => {
             return res.data;
     })
@@ -15,6 +15,7 @@ export const getAllProducts = () => {
 }
 
 export const getProductsByCategory = category => {
+    console.log('hello');
     return axios.get(base + 'products/category/' + category) 
     .then(res => {
             console.log('category res', res);
@@ -26,7 +27,7 @@ export const getProductsByCategory = category => {
 }
 
 export const getSingleProduct = productId => {
-    return axios.get(base + 'products/single/' + productId) 
+    return axios.get(base + 'products/' + productId) 
     .then(res => {
             return res.data;
     })
@@ -64,7 +65,7 @@ export const getProductsInCart = async productList => {
 
 };
 
-/* Payment */
+// Payment 
 export const getPublicStripeKey = () => {
     return axios.get(base + 'payment/public-key')
     .then(res => {return res})
