@@ -182,6 +182,7 @@ div.menu-overlay {
 }
 
 /* Normal-Page Banner */
+/*
 .banner {
     display: flex;
     flex-direction: column;
@@ -211,41 +212,8 @@ div.menu-overlay {
         text-align: justify;
     }
 
-}
+}*/
 
-/* Normal Page Text */
-.section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-light {
-    background-color: #4e5154;
-}
-
-.section-dark {
-    background-color:#202020;  
-}
-
-.section-text {
-    margin-top: -5px;
-    margin-bottom: 0;
-    padding: 100px;
-}
-
-h2.section-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 80px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-p.section-text {
-    font-size: 40px;
-
-}
 
 /* Promotion Page */
 .page-container {
@@ -327,14 +295,6 @@ iframe {
 }
 
 /* Technology Page */
-.banner-text.tech {
-    padding: 100px;
-}
-
-.banner-image.tech {
-    min-height: 400px;
-    object-fit: cover;
-}
 
 .list {
     display: flex;
