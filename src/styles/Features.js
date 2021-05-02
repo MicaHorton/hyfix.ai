@@ -7,7 +7,7 @@ export const FeatureSection = styled.div`
 
     background-color: #0d2233;
     padding-top: 200px;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
 
     p {
         font-size: 20px;
@@ -26,6 +26,7 @@ export const FeatureSection = styled.div`
     @media (min-width: 1224px) {
         p {
             font-size: 30px;
+            line-height: 50px;
         }
     }
 

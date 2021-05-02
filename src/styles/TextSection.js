@@ -27,9 +27,12 @@ export const TextSection = styled.section`
         
         
         p {
-            font-size: 27px;
+            width: 70vw;
+            font-size: 30px;
             line-height: 50px;
         }
+
+        
     `}
 
 `;
