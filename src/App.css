@@ -782,7 +782,7 @@ input {
     }
 
     .store-bar > *:hover {
-        color: #7b7a80; 
+        color: rgb(44, 39, 68); 
     }
 
     .products-page, .single-page, .checkout-page  {

@@ -1,6 +1,11 @@
-import company_banner from '../media/globe.jpg';
 import GlobeBanner from '../components/GlobeBanner';
 import TextSection from '../components/TextSection';
+import { FeatureSection, FeatureCard } from '../components/Features';
+
+import company_banner from '../media/globe_w_gradient.png';
+import cog_icon from '../media/cog.svg'; 
+import search_icon from '../media/search.svg'; 
+import world_icon from '../media/world.svg'; 
 
 const Company = () => (
     <main>
@@ -13,22 +18,32 @@ const Company = () => (
         </GlobeBanner>
         
 
-        <TextSection bg='light'>
+        <FeatureSection>
             <p> As a first step towards this journey, we are building a global network of RTK reference 
             stations to provide  
+            </p>
                 <ul>
-                    <li>hardware agnostic</li>
-                    <li>fully modernized</li>
-                    <li>open-standard based</li>
-                    <li>high precision</li>
+                    <FeatureCard>
+                        <p>hardware agnostic</p>
+                        <img src={cog_icon} alt='cog'/>
+                    </FeatureCard>
+                    <FeatureCard>
+                        <p>open-standards based</p>
+                        <img src={world_icon} alt='globe'/>
+                    </FeatureCard>
+                    <FeatureCard>
+                        <p>high precision</p>
+                        <img src={search_icon} alt='magnifying glass'/>
+                    </FeatureCard>
                 </ul>
+            <p>
             data and correction services to users in IoT and other markets.
             </p>
-        </TextSection>
+        </FeatureSection>
 
-        <TextSection bg='dark'>
-            <p>  Founded by pioneers in IoT, Sensor Fusion, 
-                Inertial Navigation and GNSS networking, we are headquartered in the heart of Silicon Valley.
+        <TextSection bg='blue'>
+            <p>Founded by pioneers in IoT, Sensor Fusion, 
+            Inertial Navigation and GNSS networking, we are headquartered in the heart of Silicon Valley.
             </p>
         </TextSection>          
     
@@ -38,6 +53,15 @@ const Company = () => (
 export default Company;
 
 /*
+
+<FeatureCard>
+                        <p>open-standards based</p>
+                        <img src={world_icon} alt='globe'/>
+                    </FeatureCard>
+                    <FeatureCard>
+                        <p>high precision</p>
+                        <img src={search_icon} alt='magnifying glass'/>
+                    </FeatureCard>
 
 <div className='company-banner'></div>
 PRECISION IS A SERVICE 

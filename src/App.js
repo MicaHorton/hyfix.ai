@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 
@@ -16,41 +16,39 @@ import Category from './pages/store/Category.js';
 import Single from './pages/store/Single.js';
 import Cart from './pages/store/Cart.js';
 import Checkout from './pages/store/Checkout.js';
-
-// import Success from './pages/store/Success.js';
-
+import { getAllProducts } from './api.js';
 
 
-/* Store Components */
-// import StoreNav from './components/StoreNavbar.js';
+const App = () => {
+    const [products, setProducts] = useState([]);
 
-// import All from './components/All.js';
-// import Single from './components/store/products/Single.js';
-// import Category from './components/Category.js'
+    useEffect(() => {
+        getAllProducts()
+        .then(products => setProducts(products))
+        .catch(err => console.log(err))
+        
+    }, []);
 
-// import Cart from './components/store/purchase/Cart.js';
-// import Checkout from './components/store/purchase/Checkout.js';
-// import Sucess from './components/Success.js';
-
-function App() {
-  return (
-    <Router>
-      <Navbar path='/' />
-      <Route path='/' exact component={Company} />
-      <Route path='/company' exact component={Company} />
-      <Route path='/promotion' exact component={Promotion} />
-      <Route path='/applications' exact component={Applications} />
-      <Route path='/network' exact component={Network} />
-      <Route path='/technology' exact component={Technology} />
-      <Route path='/contact' exact component={Contact} />   
+    return (
+        <Router>
+            <Navbar path='/' />
+            <Route path='/' exact component={Company} />
+            <Route path='/company' exact component={Company} />
+            <Route path='/promotion' exact component={Promotion} />
+            <Route path='/applications' exact component={Applications} />
+            <Route path='/network' exact component={Network} />
+            <Route path='/technology' exact component={Technology} />
+            <Route path='/contact' exact component={Contact} />   
       
-      <Route path='/store' component={StoreNavbar} />  
-      <Route path='/store' exact component={All} /> 
-      <Route path='/store/category' exact component={Category} /> 
-      <Route path='/store/single' exact component={Single} />
-      <Route path='/store/cart' exact component={Cart} />
-      <Route path='/store/checkout' exact component={Checkout} />
-   </Router>
+            <Route path='/store' component={StoreNavbar} />  
+            <Route exact path='/store'>
+              <All products={products}/>
+            </Route>
+            <Route path='/store/category' exact component={Category} /> 
+            <Route path='/store/single' exact component={Single} />
+            <Route path='/store/cart' exact component={Cart} />
+            <Route path='/store/checkout' exact component={Checkout} />
+        </Router>
     
   );
 }
