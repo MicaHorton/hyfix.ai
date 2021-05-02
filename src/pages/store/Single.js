@@ -1,6 +1,8 @@
 import Button from '../../styles/Button';
 import { useCookies } from 'react-cookie';
 import { useHistory } from 'react-router-dom';
+import SingleCard from '../../styles/SingleCard';
+import PageWrapper from '../../styles/PageWrapper';
 
 
 const Single = (props) => {
@@ -31,21 +33,20 @@ const Single = (props) => {
     
     if (props.product) {
         return (
-            <main className='single-page'>
-                <Card className='single-article'>
-                    <h1 className='product-header'>{props.product.name}</h1>
-    
-                    <img alt={props.product.img} className='single-image' 
-                    src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.product.img}`}></img>
+            <PageWrapper>
+                <SingleCard>
+                    <h1>{props.product.name}</h1>
+                    
+                    <img src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.product.img}`}
+                    alt={props.product.img}></img>
     
                     <h2>price: $ {props.product.price}</h2>
                     <h3>{props.product.description} Hello!</h3>
-                    
-                </Card>
+                </SingleCard>
                 <Button onClick={addToCart}>
                     Add To Cart
                 </Button>
-            </main>
+            </PageWrapper>
         );
     }
     

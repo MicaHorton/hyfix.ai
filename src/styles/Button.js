@@ -17,6 +17,9 @@ export const Button = styled.button`
     margin-bottom: 100px;
     box-shadow: 15px 15px 20px black;
 
+    margin-left: auto;
+    margin-right: auto;
+
     :hover {
         background-color:#333397;
     }

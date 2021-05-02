@@ -20,7 +20,7 @@ const Company = () => (
 
         <FeatureSection>
             <p> As a first step towards this journey, we are building a global network of RTK reference 
-            stations to provide  
+            stations to provide data and correction services that are:
             </p>
                 <ul>
                     <FeatureCard>
@@ -37,7 +37,7 @@ const Company = () => (
                     </FeatureCard>
                 </ul>
             <p>
-            data and correction services to users in IoT and other markets.
+            
             </p>
         </FeatureSection>
 
