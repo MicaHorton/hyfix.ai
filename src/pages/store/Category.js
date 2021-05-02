@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from '../../components/ProductCard.js'; 
 import { getProductsByCategory } from '../../api';
 
+
 export default class Category extends Component {
 
     constructor(props) {

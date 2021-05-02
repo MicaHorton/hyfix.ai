@@ -1,63 +1,76 @@
-import React, { Component } from 'react';
-import { withCookies } from 'react-cookie';
-import { getSingleProduct } from '../../api';
+import Button from '../../styles/Button';
+import { useCookies } from 'react-cookie';
+import { useHistory } from 'react-router-dom';
 
-class Single extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { productId: this.props.location.hash.split('#').pop(),
-                       productInfo: {} };
-        this.addToCart = this.addToCart.bind(this);
-     }
 
-    addToCart() {
-        const cookies = this.props.cookies
-        const userCart = cookies.get('userCart');
-
-        let itemsInCart;
+const Single = (props) => {
+    const [cookies, setCookies] = useCookies(['userCart']);
+    const history = useHistory();
+    
+    const addToCart = () => {
+        let userCart = cookies.userCart;
+        let existingItems;
+        
         if (userCart !== 'undefined') {
-            itemsInCart = userCart;
+            existingItems = userCart;
         } else {
-            itemsInCart = false;
+            existingItems = false;
         }
 
-        if (itemsInCart) {
-            itemsInCart.push(this.state.productId);
-            cookies.set('userCart', itemsInCart , {path: '/'});
+        if (existingItems) {
+            // Add item to existing cookie
+            existingItems.push(props.product._id)
+            setCookies('userCart', userCart , {path: '/'})
         } else {
-            console.log('No cookies exist yet')
-            cookies.set('userCart', [this.state.productId], {path: '/'})
+            // Create new cookie
+            setCookies('userCart', [props.product._id], {path: '/'})
         }
 
-        console.log(this.props.history.push('/store'));
-    }
-
-    componentDidMount() {
-        getSingleProduct(this.state.productId)
-        .then(product => this.setState({ productInfo: product }))
-        .catch(err => console.log(err))
+        history.push('/store');
     }
     
-    render() {
-          return (
+    if (props.product) {
+        return (
             <main className='single-page'>
-                <article className='single-article'>
-                    <h1 className='product-header'>{this.state.productInfo.name}</h1>
-
-                    <img alt={this.state.productInfo.img} className='single-image' 
-                    src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${this.state.productInfo.img}`}></img>
-
-                    <h2>price: $ {this.state.productInfo.price}</h2>
-                    <h3>{this.state.productInfo.description} Hello!</h3>
+                <Card className='single-article'>
+                    <h1 className='product-header'>{props.product.name}</h1>
+    
+                    <img alt={props.product.img} className='single-image' 
+                    src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.product.img}`}></img>
+    
+                    <h2>price: $ {props.product.price}</h2>
+                    <h3>{props.product.description} Hello!</h3>
                     
-
-                </article>
-                <button className='button add-button' onClick={() => this.addToCart()}>Add To Cart</button>
+                </Card>
+                <Button onClick={addToCart}>
+                    Add To Cart
+                </Button>
             </main>
-     
         );
     }
+    
+    return null;
+
 }
 
-export default withCookies(Single);
+export default Single;
+
+/*
+
+<main className='single-page'>
+                <article className='single-article'>
+                    <h1 className='product-header'>{props.product.name}</h1>
+    
+                    <img alt={props.product.img} className='single-image' 
+                    src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.product.img}`}></img>
+    
+                    <h2>price: $ {props.product.price}</h2>
+                    <h3>{props.product.description} Hello!</h3>
+                    
+                </article>
+                <Button onClick={addToCart}>
+                    Add To Cart
+                </Button>
+            </main>
+*/
 

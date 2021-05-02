@@ -1,6 +1,6 @@
-import GlobeBanner from '../components/GlobeBanner';
-import TextSection from '../components/TextSection';
-import { FeatureSection, FeatureCard } from '../components/Features';
+import GlobeBanner from '../styles/GlobeBanner';
+import TextSection from '../styles/TextSection';
+import { FeatureSection, FeatureCard } from '../styles/Features';
 
 import company_banner from '../media/globe_w_gradient.png';
 import cog_icon from '../media/cog.svg'; 

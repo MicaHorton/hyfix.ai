@@ -1,6 +1,6 @@
 import network_banner from '../media/network_banner.jpg';
-import Banner from '../components/Banner.js';
-import TextSection from '../components/TextSection.js';
+import Banner from '../styles/Banner.js';
+import TextSection from '../styles/TextSection.js';
 
 const Network = () => (
     <main>

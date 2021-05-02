@@ -1,4 +1,4 @@
-import TextSection from '../components/TextSection';
+import TextSection from '../styles/TextSection';
 
 const Contact = () => (
     <main className='contact-page'>

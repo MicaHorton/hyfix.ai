@@ -1,6 +1,6 @@
 import applications_banner from '../media/applications_banner.png';
-import Banner from '../components/Banner';
-import TextSection from '../components/TextSection';
+import Banner from '../styles/Banner';
+import TextSection from '../styles/TextSection';
 
 const Applications = () => (
     <main>

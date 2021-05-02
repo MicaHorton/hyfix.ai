@@ -3,7 +3,7 @@ import rtk_gnss_icon from '../media/rtk_gnss_icon.png';
 import sensor_fusion_icon from '../media/sensor_fusion_icon.png'
 import lora_icon from '../media/lora_icon.webp'
 import blockchain_icon from '../media/blockchain_icon.png';
-import Banner from '../components/Banner.js';
+import Banner from '../styles/Banner.js';
 
 const Technology = () => (
     <main>

@@ -45,7 +45,12 @@ const App = () => {
               <All products={products}/>
             </Route>
             <Route path='/store/category' exact component={Category} /> 
-            <Route path='/store/single' exact component={Single} />
+            <Route path='/store/:id' render={(props) => {
+                let id = props.match.params.id;
+                let product = products.filter(x => x._id === id)[0];
+                return <Single product={product}/>;
+            }} />
+
             <Route path='/store/cart' exact component={Cart} />
             <Route path='/store/checkout' exact component={Checkout} />
         </Router>
