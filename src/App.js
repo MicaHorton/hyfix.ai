@@ -9,6 +9,8 @@ import Applications from './pages/Applications.js';
 import Network from './pages/Network.js';
 import Technology from './pages/Technology.js';
 import Contact from './pages/Contact.js';
+import Privacy from './pages/Privacy.js';
+import Footer from './components/Footer.js';
 
 import StoreNavbar from './components/StoreNavbar.js';
 import All from './pages/store/All.js';
@@ -38,7 +40,9 @@ const App = () => {
             <Route path='/applications' exact component={Applications} />
             <Route path='/network' exact component={Network} />
             <Route path='/technology' exact component={Technology} />
-            <Route path='/contact' exact component={Contact} />   
+            <Route path='/contact' exact component={Contact} /> 
+            <Route path='/privacy' exact component={Privacy} />   
+            <Footer path='/' />
       
             <Route path='/store' component={StoreNavbar} />  
             <Route exact path='/store'>
