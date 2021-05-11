@@ -20,13 +20,14 @@ import Cart from './pages/store/Cart.js';
 import Checkout from './pages/store/Checkout.js';
 import { getAllProducts } from './api.js';
 
-
 const App = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        getAllProducts()
-        .then(products => setProducts(products))
+      getAllProducts()
+        .then(products => {
+          setProducts(products);
+        })
         .catch(err => console.log(err))
         
     }, []);
