@@ -19,7 +19,7 @@ const SingleCard = styled.article`
 
     img {
         width: 90%;
-        height: 40%;
+        max-height: 300px;
         object-fit: contain;
     }
 `;

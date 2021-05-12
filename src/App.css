@@ -482,6 +482,8 @@ article > h3 {
 }
 
 .product-image {
+    margin-top: 20px;
+    margin-bottom: 40px;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -537,6 +539,7 @@ article > h3 {
 }
 
 .cart-image {
+    margin-left: 100px;
     height: 200px;
     object-fit: contain;
 }

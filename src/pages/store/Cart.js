@@ -1,17 +1,64 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
+import CartCard from '../../components/CartCard';
+
+const Cart = (props) => {
+    const [cookies] = useCookies(['userCart']);
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        let userCart = cookies.userCart;
+
+        if (userCart !== undefined) {
+            if (props.products) {
+                let productsInCart = props.products.filter(x => {
+                    return cookies.userCart.includes(x.id); 
+                });
+
+                let currentItems = productsInCart.map(current => {
+                    return <CartCard product={current} key={current.id}/>
+                });
+
+                setItems(currentItems);
+            }
+        } 
+
+    }, []);
+
+    
+    if (cookies.userCart) {
+        return (
+            <main className='products-page'>
+                <div className='products-list'>
+                    {items}
+                </div>
+                <Link to='/store/checkout' className='button checkout-button'>Checkout</Link>
+
+            </main>
+        );
+    } else {
+        return (
+            <main className='products-page'>
+                <p className='no-items'>No Items in Cart</p>
+            </main>
+        );
+    }
+}
+
+export default Cart;
+
+/*
+<div className='products-list'>
+                    {items}
+                </div>
+                <Link to='/store/checkout' className='button checkout-button'>Checkout</Link>
+*/
+
+/*
 import { Link } from 'react-router-dom';
 import { withCookies } from 'react-cookie';
 import { getProductsInCart } from '../../api';
-
-
-const Item = props => (
-    <article className='cart-item'>
-        <img className='cart-image' alt={props.item.img}
-         src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.item.img}`}></img>
-        <h1>{props.item.name}</h1>
-        <h2>$ {props.item.price}</h2>
-    </article>
-)
 
 class Cart extends Component {
     constructor(props) {
@@ -80,6 +127,7 @@ class Cart extends Component {
     }
 
     render() {
+        console.log(props);
         if (this.state.renderedItems.length > 0) {
             return (
                 <main className='products-page'>
@@ -102,5 +150,5 @@ class Cart extends Component {
 }
 
 export default withCookies(Cart);
-
+*/
  

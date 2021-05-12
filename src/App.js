@@ -13,8 +13,7 @@ import Privacy from './pages/Privacy.js';
 import Footer from './components/Footer.js';
 
 import StoreNavbar from './components/StoreNavbar.js';
-import All from './pages/store/All.js';
-import Category from './pages/store/Category.js';
+import Products from './pages/store/Products.js';
 import Single from './pages/store/Single.js';
 import Cart from './pages/store/Cart.js';
 import Checkout from './pages/store/Checkout.js';
@@ -26,7 +25,7 @@ const App = () => {
     useEffect(() => {
       getAllProducts()
         .then(products => {
-          setProducts(products);
+          setProducts(products.data);
         })
         .catch(err => console.log(err))
         
@@ -43,21 +42,29 @@ const App = () => {
             <Route path='/technology' exact component={Technology} />
             <Route path='/contact' exact component={Contact} /> 
             <Route path='/privacy' exact component={Privacy} />   
-            <Footer path='/' />
       
-            <Route path='/store' component={StoreNavbar} />  
-            <Route exact path='/store'>
-              <All products={products}/>
-            </Route>
-            <Route path='/store/category' exact component={Category} /> 
+            <Route path='/store' component={StoreNavbar} />
+            <Route path='/store/checkout' exact component={Checkout} />
+
+            <Route exact path='/store' render={(props) => {
+                return <Products products={products}/>;
+            }}/>
+            <Route path='/store/category' render={(props) => {
+                let category = props.location.search.split('?')[1];
+                let cproducts = products.filter(x => x.metadata.category === category);
+                return <Products products={cproducts}/>;
+            }} /> 
             <Route path='/store/:id' render={(props) => {
                 let id = props.match.params.id;
-                let product = products.filter(x => x._id === id)[0];
+                let product = products.filter(x => x.id === id)[0];
                 return <Single product={product}/>;
             }} />
+            <Route path='/store/cart' exact render={(props) => {
+                return <Cart products={products}/>;
+            }} />
 
-            <Route path='/store/cart' exact component={Cart} />
-            <Route path='/store/checkout' exact component={Checkout} />
+            <Footer path='/' />
+
         </Router>
     
   );

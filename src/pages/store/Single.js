@@ -21,11 +21,11 @@ const Single = (props) => {
 
         if (existingItems) {
             // Add item to existing cookie
-            existingItems.push(props.product._id)
+            existingItems.push(props.product.id)
             setCookies('userCart', userCart , {path: '/'})
         } else {
             // Create new cookie
-            setCookies('userCart', [props.product._id], {path: '/'})
+            setCookies('userCart', [props.product.id], {path: '/'})
         }
 
         history.push('/store');
@@ -37,7 +37,7 @@ const Single = (props) => {
                 <SingleCard>
                     <h1>{props.product.name}</h1>
                     
-                    <img src={`https://s3-us-west-1.amazonaws.com/hyfxi.ai-images/${props.product.img}`}
+                    <img src={`${props.product.images[0]}`}
                     alt={props.product.img}></img>
     
                     <h2>price: $ {props.product.price}</h2>
