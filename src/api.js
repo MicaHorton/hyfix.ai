@@ -1,6 +1,6 @@
 import axios from 'axios';
-const base = 'http://localhost:5000/';
-// const base = 'https://api.hyfix.ai/';
+// const base = 'http://localhost:5000/';
+const base = 'https://api.hyfix.ai/';
 
 // Products
 export const getAllProducts = async () => {    
