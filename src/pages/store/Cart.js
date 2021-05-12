@@ -24,7 +24,7 @@ const Cart = (props) => {
             }
         } 
 
-    }, []);
+    }, [cookies, props]);
 
     
     if (cookies.userCart) {
@@ -48,12 +48,6 @@ const Cart = (props) => {
 
 export default Cart;
 
-/*
-<div className='products-list'>
-                    {items}
-                </div>
-                <Link to='/store/checkout' className='button checkout-button'>Checkout</Link>
-*/
 
 /*
 import { Link } from 'react-router-dom';

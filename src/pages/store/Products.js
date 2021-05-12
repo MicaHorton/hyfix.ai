@@ -4,6 +4,7 @@ import Card from '../../components/ProductCard.js';
 
 const Products = (props) => {
     if (props.products) {
+
         let products = props.products.map(current => {
             return <Card item={current} key={current.id}/>;
         })
