@@ -3,7 +3,7 @@ const CartCard = props => (
         <img className='cart-image' alt='undefined'
          src={props.product.images[0]}></img>
         <h1>{props.product.name}</h1>
-        <h2>$ 200</h2>
+        <h2>$ 200 USD</h2>
     </article>
 )
 
