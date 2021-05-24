@@ -13,7 +13,7 @@ const Card = props => {
             </Link>
                 
 
-            <h2>price: $200</h2>
+            <h2>price: $200 USD</h2>
             <h3>{props.item.description}</h3>
             <Link to={{pathname: '/store/' + props.item.id}} 
                 className='read-more'>read more</Link>

@@ -40,7 +40,7 @@ const Single = (props) => {
                     <img src={`${props.product.images[0]}`}
                     alt={props.product.img}></img>
     
-                    <h2>price: $ 200</h2>
+                    <h2>price: $ 200 USD</h2>
                     <h3>{props.product.description}</h3>
                 </SingleCard>
                 <Button onClick={addToCart}>
