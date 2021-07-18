@@ -23,7 +23,8 @@ const Card = (props) => {
             </Link>
 
             <h2>
-                price: $ {props.item.price.unit_amount.toLocaleString()} USD
+                price: $ {(props.item.price.unit_amount / 100).toLocaleString()}{' '}
+                USD
             </h2>
             <h3>{props.item.description}</h3>
             <Link

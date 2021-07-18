@@ -6,7 +6,9 @@ const CartCard = (props) => (
             src={props.product.images[0]}
         ></img>
         <h1>{props.product.name}</h1>
-        <h2>$ {props.product.price.unit_amount.toLocaleString()} USD</h2>
+        <h2>
+            $ {(props.product.price.unit_amount / 100).toLocaleString()} USD
+        </h2>
     </article>
 )
 

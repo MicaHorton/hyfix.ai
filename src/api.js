@@ -1,6 +1,6 @@
 import axios from 'axios'
-// const base = 'http://localhost:5000/'
-const base = 'https://api.hyfix.ai/'
+const base = 'http://localhost:5000/'
+// const base = 'https://api.hyfix.ai/'
 
 // Products
 export const getAllProducts = async () => {
@@ -14,57 +14,17 @@ export const getAllProducts = async () => {
         })
 }
 
-export const getProductsByCategory = (category) => {
-    return axios
-        .get(base + 'products/category/' + category)
-        .then((res) => {
-            console.log('category res', res)
-            return res.data
-        })
-        .catch((err) => {
-            return err
-        })
-}
-
-export const getSingleProduct = (productId) => {
-    return axios
-        .get(base + 'products/' + productId)
-        .then((res) => {
-            return res.data
-        })
-        .catch((err) => {
-            return err
-        })
-}
-
 export const getProductsInCart = async (productList) => {
-    let product
-    let fetchedProducts = []
-    for (product in productList) {
-        let fetchedProduct = await getSingleProduct(productList[product])
-        fetchedProducts.push(fetchedProduct)
-    }
-    console.log(fetchedProducts)
-    return fetchedProducts
-
-    /*
-    return axios.get(base + 'products/cart', {
-        params: {
-        products: productList
-    }
-    })
-    .then(res => {
-        console.log('cart response', res.data);
-        return res.data;
-    })
-    .catch((err) => {
-        return err
-    });*/
+    const products = await getAllProducts()
+    const productsInCart = products.filter(
+        (product) => product.id in productList
+    )
+    return products
 }
 
 // Payment
-export const getPublicStripeKey = () => {
-    return axios
+export const getPublicStripeKey = async () => {
+    const public_key = await axios
         .get(base + 'payment/public-key')
         .then((res) => {
             return res
@@ -72,6 +32,8 @@ export const getPublicStripeKey = () => {
         .catch((err) => {
             return err
         })
+
+    console.log(public_key)
 }
 
 export const createPaymentIntent = (products) => {
@@ -80,7 +42,6 @@ export const createPaymentIntent = (products) => {
             products: products
         })
         .then((res) => {
-            console.log('payment intent', res)
             return res.data.client_secret
         })
         .catch((err) => {

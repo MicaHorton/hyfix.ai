@@ -1,5 +1,4 @@
 .eslintcache
 /node-modules
 /build
-
-
+.env

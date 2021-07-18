@@ -24,7 +24,7 @@ const Single = (props) => {
             setCookies('userCart', userCart, { path: '/' })
         } else {
             // Create new cookie
-            setCookies('userCart', [props.product.id], { path: '/' })
+            setCookies('userCart', [props.product.price.id], { path: '/' })
         }
 
         history.push('/store')
@@ -43,7 +43,10 @@ const Single = (props) => {
 
                     <h2>
                         price: ${' '}
-                        {props.product.price.unit_amount.toLocaleString()} USD
+                        {(
+                            props.product.price.unit_amount / 100
+                        ).toLocaleString()}{' '}
+                        USD
                     </h2>
                     <h3>{props.product.description}</h3>
                 </SingleCard>

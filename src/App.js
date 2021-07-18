@@ -86,25 +86,3 @@ const App = () => {
 }
 
 export default App
-
-/*
-
-<Route path='/admin' component={adminRouter}/>
-<Route component={websiteRouter}/>
-
-const adminRouter = () => (
-  <div>
-    <Switch>
-      <Route exact path='/admin/add' component={Add} />
-    </Switch>
-  </div>
-);
-
-<Route path='/store/all' component={All} />
-<Route path='/store/category' component={Category} />
-<Route path='/store/single' component={Single} />
-<Route path='/store/cart' exact component={Cart} />
-<Route path='/store/checkout' exact component={Checkout} />
-<Route path='/store/success' exact component={Sucess}></Route>
-
-*/
