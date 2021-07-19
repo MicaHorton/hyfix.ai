@@ -1,6 +1,6 @@
 import axios from 'axios'
-const base = 'http://localhost:5000/'
-// const base = 'https://api.hyfix.ai/'
+// const base = 'http://localhost:5000/'
+const base = 'https://api.hyfix.ai/'
 
 // Products
 export const getAllProducts = async () => {
@@ -24,16 +24,14 @@ export const getProductsInCart = async (productList) => {
 
 // Payment
 export const getPublicStripeKey = async () => {
-    const public_key = await axios
+    return axios
         .get(base + 'payment/public-key')
         .then((res) => {
-            return res
+            return res.data.publicKey
         })
         .catch((err) => {
             return err
         })
-
-    console.log(public_key)
 }
 
 export const createPaymentIntent = (products) => {

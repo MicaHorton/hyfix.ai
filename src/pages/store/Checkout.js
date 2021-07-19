@@ -1,13 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { loadStripe } from '@stripe/stripe-js'
 import { useCookies } from 'react-cookie'
-import {
-    CardElement,
-    Elements,
-    useElements,
-    useStripe
-} from '@stripe/react-stripe-js'
+import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import { getProductsInCart, createPaymentIntent } from '../../api'
 import { useHistory } from 'react-router'
 
@@ -29,7 +23,7 @@ const CARD_ELEMENT_OPTIONS = {
     }
 }
 
-const CheckoutForm = () => {
+const Checkout = (props) => {
     const stripe = useStripe()
     const elements = useElements()
     const history = useHistory()
@@ -176,18 +170,4 @@ const CheckoutForm = () => {
     )
 }
 
-const stripePromise = loadStripe(
-    'pk_test_51I0CsSIzd0xoN2NEasujFfk8OIEYrwO5KrdT4fYAjUiQ8iJVP1fumZ3XGDf1XJq0Q3C9I0wlsQxbtYY2xRAvP2eZ0024wl5yqd'
-)
-
-const CheckoutPage = () => {
-    return (
-        <Elements stripe={stripePromise}>
-            <CheckoutForm />
-        </Elements>
-    )
-}
-
-export default CheckoutPage
-
-/* 4242 4242 4242 4242 */
+export default Checkout

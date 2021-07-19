@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { getAllProducts, getPublicStripeKey } from './api.js'
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
 import './App.css'
 
 import Navbar from './components/Navbar.js'
@@ -17,7 +20,8 @@ import Products from './pages/store/Products.js'
 import Single from './pages/store/Single.js'
 import Cart from './pages/store/Cart.js'
 import Checkout from './pages/store/Checkout.js'
-import { getAllProducts } from './api.js'
+
+const stripePromise = getPublicStripeKey().then((key) => loadStripe(key))
 
 const App = () => {
     const [products, setProducts] = useState([])
@@ -43,13 +47,16 @@ const App = () => {
             <Route path="/privacy" exact component={Privacy} />
 
             <Route path="/store" component={StoreNavbar} />
-            <Route path="/store/checkout" exact component={Checkout} />
+            <Route path="/store/checkout" exact>
+                <Elements stripe={stripePromise}>
+                    <Checkout />
+                </Elements>
+            </Route>
 
             <Route
                 exact
                 path="/store"
                 render={(props) => {
-                    console.log(products)
                     return <Products products={products} />
                 }}
             />

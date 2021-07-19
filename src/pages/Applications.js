@@ -24,11 +24,4 @@ const Applications = () => (
     </main>
 )
 
-/*
-
-<header className='banner'>
-    <img className='banner-image' src={applications_banner} alt='logo'/>
-</header>
-*/
-
 export default Applications
