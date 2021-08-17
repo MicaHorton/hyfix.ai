@@ -1,53 +1,49 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useCookies } from 'react-cookie';
-import CartCard from '../../components/CartCard';
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useCookies } from 'react-cookie'
+import CartCard from '../../components/CartCard'
 
 const Cart = (props) => {
-    const [cookies] = useCookies(['userCart']);
-    const [items, setItems] = useState([]);
+    const [cookies] = useCookies(['userCart'])
+    const [items, setItems] = useState([])
 
     useEffect(() => {
-        let userCart = cookies.userCart;
+        let userCart = cookies.userCart
 
         if (userCart !== undefined) {
             if (props.products) {
-                let productsInCart = props.products.filter(x => {
-                    return cookies.userCart.includes(x.id); 
-                });
+                let productsInCart = props.products.filter((x) => {
+                    return cookies.userCart.includes(x.id)
+                })
 
-                let currentItems = productsInCart.map(current => {
-                    return <CartCard product={current} key={current.id}/>
-                });
+                let currentItems = productsInCart.map((current) => {
+                    return <CartCard product={current} key={current.id} />
+                })
 
-                setItems(currentItems);
+                setItems(currentItems)
             }
-        } 
+        }
+    }, [cookies, props])
 
-    }, [cookies, props]);
-
-    
     if (cookies.userCart) {
         return (
-            <main className='products-page'>
-                <div className='products-list'>
-                    {items}
-                </div>
-                <Link to='/store/checkout' className='button checkout-button'>Checkout</Link>
-
+            <main className="products-page">
+                <div className="products-list">{items}</div>
+                <Link to="/store/checkout" className="button checkout-button">
+                    Checkout
+                </Link>
             </main>
-        );
+        )
     } else {
         return (
-            <main className='products-page'>
-                <p className='no-items'>No Items in Cart</p>
+            <main className="products-page">
+                <p className="no-items">No Items in Cart</p>
             </main>
-        );
+        )
     }
 }
 
-export default Cart;
-
+export default Cart
 
 /*
 import { Link } from 'react-router-dom';
@@ -80,7 +76,7 @@ class Cart extends Component {
         }
 
         return null;
-       
+
     }
 
     componentDidMount() {
@@ -94,8 +90,8 @@ class Cart extends Component {
         if (this.state.itemsChanged) {
             this.setState({ itemsChanged: false});
             this.fetchItems();
-        } 
-        
+        }
+
         if (this.state.fetchedItems) {
             console.log(this.state.fetchedItems);
             this.renderItems()
@@ -117,7 +113,7 @@ class Cart extends Component {
         if (this.state.renderedItems.toString() !== newRenderedItems.toString()) {
             this.setState({ renderedItems: newRenderedItems });
         }
-        
+
     }
 
     render() {
@@ -139,10 +135,9 @@ class Cart extends Component {
 
             )
         }
-        
+
     }
 }
 
 export default withCookies(Cart);
 */
- 

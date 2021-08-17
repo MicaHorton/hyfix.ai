@@ -24,7 +24,7 @@ const Single = (props) => {
             setCookies('userCart', userCart, { path: '/' })
         } else {
             // Create new cookie
-            setCookies('userCart', [props.product.price.id], { path: '/' })
+            setCookies('userCart', [props.product.id], { path: '/' })
         }
 
         history.push('/store')
