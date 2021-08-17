@@ -12,7 +12,7 @@ const Applications = () => (
             <p>
                 The trend in many industries is to embrace IoT, Autonomy and
                 Augmented Reality Visualization is creating a large
-                high-accuracy positioning market for lower-cost devices and
+                high-accuracy positioning market for lower cost devices and
                 services. Significant challenges remain in obtaining
                 high-accuracy position data using low-cost GNSS receivers due to
                 their tendency to obtain poor quality measurements especially in
